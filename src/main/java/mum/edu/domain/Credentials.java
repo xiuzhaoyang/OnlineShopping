@@ -1,5 +1,7 @@
 package mum.edu.domain;
 
+import org.hibernate.annotations.Type;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -22,6 +24,9 @@ public class Credentials {
 	 @Column(name = "PASSWORD", nullable = false)
 	String password;
 	String verifyPassword;
+
+	@Column(columnDefinition = "TINYINT")
+	@Type(type = "org.hibernate.type.NumericBooleanType")
 	Boolean enabled;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
