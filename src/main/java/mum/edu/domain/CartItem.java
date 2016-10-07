@@ -1,13 +1,12 @@
 package mum.edu.domain;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by su on 10/7/16.
  */
+
+@Entity(name = "CART_ITEM")
 public class CartItem {
 
     @Id

@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by su on 10/6/16.
  */
 
-@Entity( name = "TRANSACTION")
+@Entity( name = "TRANSACTION_T")
 public class Transaction {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
