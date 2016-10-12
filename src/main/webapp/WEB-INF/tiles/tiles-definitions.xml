@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software
+Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/tiles/template/baseLayout.jsp">
+		<put-attribute name="title" value="Layout Title" />
+		<put-attribute name="heading" value="" />
+		<put-attribute name="tagline" value="" />
+		<put-attribute name="navigation"
+			value="/WEB-INF/tiles/template/navigation.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+
+	<!-- ROLE template -->
+	<definition name="role/list" extends="baseLayout">
+		<put-attribute name="title" value="List Roles" />
+		<put-attribute name="heading" value="List Roles" />
+		<put-attribute name="tagline" value="List Roles" />
+		<put-attribute name="content" value="/WEB-INF/views/role/list.jsp" />
+	</definition>
+
+	<definition name="role/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New Role" />
+		<put-attribute name="heading" value="Create Role" />
+		<put-attribute name="tagline" value="Create Role" />
+		<put-attribute name="content" value="/WEB-INF/views/role/add.jsp" />
+	</definition>
+
+	<!-- CUSTOMER template -->
+	<definition name="customer/list" extends="baseLayout">
+		<put-attribute name="title" value="List Customer" />
+		<put-attribute name="heading" value="List Customer" />
+		<put-attribute name="tagline" value="List Customer" />
+		<put-attribute name="content" value="/WEB-INF/views/customer/list.jsp" />
+	</definition>
+
+	<definition name="customer/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New Customer" />
+		<put-attribute name="heading" value="Create Customer" />
+		<put-attribute name="tagline" value="Create Customer" />
+		<put-attribute name="content" value="/WEB-INF/views/customer/add.jsp" />
+	</definition>
+
+
+	<!-- CATEGORY template -->
+	<definition name="category/list" extends="baseLayout">
+		<put-attribute name="title" value="List Category" />
+		<put-attribute name="heading" value="List Category" />
+		<put-attribute name="tagline" value="List Category" />
+		<put-attribute name="content" value="/WEB-INF/views/category/list.jsp" />
+	</definition>
+
+	<definition name="category/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New Category" />
+		<put-attribute name="heading" value="Create Category" />
+		<put-attribute name="tagline" value="Create Category" />
+		<put-attribute name="content" value="/WEB-INF/views/category/add.jsp" />
+	</definition>
+
+
+	<!-- User template -->
+	<definition name="user/list" extends="baseLayout">
+		<put-attribute name="title" value="List User" />
+		<put-attribute name="heading" value="List User" />
+		<put-attribute name="tagline" value="List User" />
+		<put-attribute name="content" value="/WEB-INF/views/user/list.jsp" />
+	</definition>
+
+	<definition name="user/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New User" />
+		<put-attribute name="heading" value="Create User" />
+		<put-attribute name="tagline" value="Create User" />
+		<put-attribute name="content" value="/WEB-INF/views/user/add.jsp" />
+	</definition>
+
+	<definition name="home" extends="baseLayout">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="heading" value="Home" />
+		<put-attribute name="tagline" value="Home" />
+		<put-attribute name="content" value="/WEB-INF/views/home.jsp" />
+	</definition>
+
+</tiles-definitions>
