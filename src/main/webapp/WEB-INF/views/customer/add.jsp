@@ -1,8 +1,3 @@
-<%-- 
-    Document   : add
-    Created on : May 16, 2015, 6:55:56 PM
-    Author     : Bayansuren
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -14,7 +9,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="<spring:url value="/"/>"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="<spring:url value="/customer/list/"/>"><i class="fa fa-dashboard"></i> Customer List</a></li>
+        <li><a href="<spring:url value="/customers/list/"/>"><i class="fa fa-dashboard"></i> Customer List</a></li>
         <li class="active">Add Customer</li>
     </ol>
 </section>

@@ -15,6 +15,13 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
 	</definition>
 
+	<definition name="welcome" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="heading" value="Welcome" />
+		<put-attribute name="tagline" value="Welcome" />
+		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+
 	<!-- ROLE template -->
 	<definition name="role/list" extends="baseLayout">
 		<put-attribute name="title" value="List Roles" />
@@ -75,13 +82,6 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="heading" value="Create User" />
 		<put-attribute name="tagline" value="Create User" />
 		<put-attribute name="content" value="/WEB-INF/views/user/add.jsp" />
-	</definition>
-
-	<definition name="home" extends="baseLayout">
-		<put-attribute name="title" value="Home" />
-		<put-attribute name="heading" value="Home" />
-		<put-attribute name="tagline" value="Home" />
-		<put-attribute name="content" value="/WEB-INF/views/home.jsp" />
 	</definition>
 
 </tiles-definitions>

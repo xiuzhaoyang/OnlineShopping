@@ -1,8 +1,3 @@
-<%-- 
-    Document   : add
-    Created on : May 16, 2015, 6:55:56 PM
-    Author     : Bayansuren
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

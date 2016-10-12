@@ -1,9 +1,3 @@
-<%-- 
-    Document   : list
-    Created on : May 16, 2015, 7:47:04 PM
-    Author     : 
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -31,7 +25,7 @@
                 <c:if test="${!empty message}">
                     <div class="alert alert-success" customer="alert">${message}</div>
                 </c:if>    
-                <a class="btn btn-success" href="${pageContext.request.contextPath}/customer/add" data-toggle="modal"> Create Customer </a>
+                <a class="btn btn-success" href="${pageContext.request.contextPath}/customers/add" data-toggle="modal"> Create Customer </a>
             </div>
             <table class="table table-striped table-advance table-hover">
                 <thead>
@@ -58,7 +52,7 @@
                                     <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
                                 </a>-->
                                 <a data-toggle="modal" href="#confirmRemove">
-                                    <button class="btn btn-danger btn-xs confirmRemove" id="${pageContext.request.contextPath}/customer/delete/${customer.id}"><i class="fa fa-trash-o "></i></button>
+                                    <button class="btn btn-danger btn-xs confirmRemove" id="${pageContext.request.contextPath}/customers/delete/${customer.id}"><i class="fa fa-trash-o "></i></button>
                                 </a>
                                 <!-- Modal -->
                                 <div class="modal fade" id="confirmRemove" tabindex="-1" customer="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

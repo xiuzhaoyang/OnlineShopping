@@ -1,9 +1,3 @@
-<%-- 
-    Document   : baseJS
-    Created on : May 15, 2015, 3:08:28 AM
-    Author     : bayna_000
---%>
-
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>

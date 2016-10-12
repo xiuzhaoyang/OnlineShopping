@@ -1,9 +1,3 @@
-<%-- 
-    Document   : navigation
-    Created on : May 12, 2015, 12:09:33 PM
-    Author     : Bayansuren
---%>
-
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -25,27 +19,27 @@
 						class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/role/list"/>"><i
+						<li><a href="<spring:url value="/roles/list"/>"><i
 								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/role/add"/>"><i
+						<li><a href="<spring:url value="/roles/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
 						<span>Customer</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/customer/list"/>"><i
+						<li><a href="<spring:url value="/customers/list"/>"><i
 								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/customer/add"/>"><i
+						<li><a href="<spring:url value="/customers/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
 						<span>System User</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/user/list"/>"><i
+						<li><a href="<spring:url value="/users/list"/>"><i
 								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/user/add"/>"><i
+						<li><a href="<spring:url value="/users/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
@@ -64,29 +58,6 @@
 						<li><a href="<spring:url value="/product/list"/>"><i
 								class="fa fa-circle-o"></i> List </a></li>
 						<li><a href="<spring:url value="/product/add"/>"><i
-								class="fa fa-circle-o"></i> Add </a></li>
-					</ul></li>
-			</security:authorize>
-			<security:authorize access="hasRole('ROLE_PROFESSOR')">
-				<li class="treeview"><a href="#"> <i
-						class="fa fa-user-secret"></i> <span>Test Category</span> <i
-						class="fa fa-angle-left pull-right"></i>
-				</a>
-					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/category/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/category/add"/>"><i
-								class="fa fa-circle-o"></i> Add </a></li>
-					</ul></li>
-					
-					<li class="treeview"><a href="#"> <i
-						class="fa fa-user-secret"></i> <span>Tests</span> <i
-						class="fa fa-angle-left pull-right"></i>
-				</a>
-					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/test/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/test/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 			</security:authorize>

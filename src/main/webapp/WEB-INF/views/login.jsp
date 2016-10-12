@@ -24,7 +24,7 @@
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                <form:form action="login" method="post">
+                <form:form action="postLogin" method="post">
                     <c:if test="${not empty error}">
                         <div class="alert alert-danger">
                             <spring:message
