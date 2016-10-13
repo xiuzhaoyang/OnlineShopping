@@ -13,4 +13,14 @@ INSERT INTO AUTHORITIES (username, authority) VALUES ('vendor', 'ROLE_VENDOR');
 INSERT INTO MEMBER (age,firstName,lastName,MEMBERNUMBER,title,USERNAME) VALUES (12,'Curious','George', 8754,'Boy Monkey',1);
 INSERT INTO MEMBER (age,firstName,lastName,MEMBERNUMBER,title,USERNAME) VALUES (123,'Allen','Rench', 8733,'Torque Master',2);
 
+INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname1', 'lastname1', 1);
+INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname2', 'lastname2', 2);
+INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname3', 'lastname3', 3);
+INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname4', 'lastname4', 4);
+
+INSERT INTO ADDRESS (address1, address2, city, country, fullname, phone_number, state, zip) VALUES ('address1-1','address1-2','FF','USA','fullname1','phone1','state1','zip1')
+INSERT INTO ADDRESS (address1, address2, city, country, fullname, phone_number, state, zip) VALUES ('address2-1','address2-2','FF','USA','fullname2','phone2','state2','zop2')
+
+INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,1)
+INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,2)
 					

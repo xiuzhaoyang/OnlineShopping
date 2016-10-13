@@ -1,11 +1,15 @@
 package mum.edu.domain;
 
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,6 +31,16 @@ public class Customer {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "USER_ID")
 	private Credentials credentials;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "CUSTOMER_ADDRESS", joinColumns = { @JoinColumn(name = "CUSTOMER_ID") }, inverseJoinColumns = {
+			@JoinColumn(name = "ADDRESS_ID") })
+	private Set<Address> addresses;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "CUSTOMER_CONTACT", joinColumns = { @JoinColumn(name = "CUSTOMER_ID") }, inverseJoinColumns = {
+			@JoinColumn(name = "CONTACT_INFORMATION_ID") })
+	private Set<ContactInformation> contactInformation;
 
 	public Customer(String firstName, String lastName, Credentials credentials) {
 		this.firstName = firstName;
@@ -64,6 +78,36 @@ public class Customer {
 
 	public void setCredentials(Credentials credentials) {
 		this.credentials = credentials;
+	}
+
+	public Set<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(Set<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+	public Set<ContactInformation> getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(Set<ContactInformation> contactInformation) {
+		this.contactInformation = contactInformation;
+	}
+
+	@Override
+	public String toString() {
+		String result = String.format("Customer[id=%d, name='%s']%n", customerId, firstName, lastName);
+		if (addresses != null) {
+			for (Address address : addresses) {
+				result += String.format("Address[id=%d, name='%s']%n", address.getId(), address.getAddress1(),
+						address.getAddress2(), address.getCity(), address.getCountry(), address.getFullName(),
+						address.getPhoneNumber());
+			}
+		}
+
+		return result;
 	}
 
 }
