@@ -34,6 +34,7 @@
 					<p>Hey ROLE: ${role}
 					<p>
 					<p>Hello ${username}</p>
+					<p></p>
 				</div>
 				<div class="icon">
 					<i class="ion ion-bag"></i>

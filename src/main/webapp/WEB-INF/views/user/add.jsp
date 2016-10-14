@@ -1,8 +1,3 @@
-<%-- 
-    Document   : add
-    Created on : May 16, 2015, 6:55:56 PM
-    Author     : Bayansuren
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -23,7 +18,7 @@
 			<div class="panel-body">
 				<div class="form">
 					<form:form class="cmxform form-horizontal tasi-form"
-						id="signupForm" modelAttribute="userCommand" method="post">
+						id="signupForm" modelAttribute="newCredential" method="post">
 						<div class="form-group ">
 							<label for="username" class="control-label col-lg-2">Username</label>
 							<div class="col-lg-10">
@@ -57,20 +52,7 @@
 							</div>
 						</div>
 
-						<div class="form-group ">
-							<label class="control-label col-lg-2" for="customer">Customer</label>
-							<div class="col-lg-10">
-								<form:select path="customer" class="form-control"
-									name="customer">
-									<form:option value="0" label="--- Select ---" />
-									<c:forEach items="${listCustomer}" var="listCustomerValue">
-										<option value="${listCustomerValue.id}">${listCustomerValue.firstName}
-											${listCustomerValue.firstName}</option>
-									</c:forEach>
-								</form:select>
-								<form:errors path="customer" cssClass="error" />
-							</div>
-						</div>
+						
 
 						<div class="form-group ">
 							<label class="control-label col-lg-2" for="roles">Roles</label>
