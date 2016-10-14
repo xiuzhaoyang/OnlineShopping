@@ -29,5 +29,3 @@ INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,2)
 -- Product
 INSERT INTO [dbo].[PRODUCT] ([IMAGE],[NAME],[PRICE],[QUANTITY],[THUMBNAIL],[VENDOR_ID])
      VALUES ('images/product/pc.jpg','PC',2000,10,'images/product/pc.jpg',1);
-
->>>>>>> branch 'master' of https://github.com/xiuzhaoyang/OnlineShopping
