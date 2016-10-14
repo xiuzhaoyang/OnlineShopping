@@ -100,12 +100,20 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/user/add.jsp" />
 	</definition>
 
+<<<<<<< HEAD
 	<!-- Product template -->
 	<definition name="product/list" extends="baseLayout">
 		<put-attribute name="title" value="List of Product" />
 		<put-attribute name="heading" value="List of Product" />
 		<put-attribute name="tagline" value="List of Product" />
 		<put-attribute name="content" value="/WEB-INF/views/product/list.jsp" />
+=======
+	<definition name="welcome" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="heading" value="Welcome" />
+		<put-attribute name="tagline" value="Welcome" />
+		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+>>>>>>> branch 'master' of https://github.com/xiuzhaoyang/OnlineShopping
 	</definition>
 
 	<definition name="product/add" extends="baseLayout">

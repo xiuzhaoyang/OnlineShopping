@@ -9,4 +9,7 @@ INSERT INTO dbo.AUTHORITIES (username, authority) VALUES ('admin', 'ROLE_USER');
 INSERT INTO  dbo.MEMBER (age,firstName,lastName,MEMBERNUMBER,title,USERNAME) VALUES (12,'Curious','George', 8754,'Boy Monkey','guest');
 INSERT INTO dbo.MEMBER (age,firstName,lastName,MEMBERNUMBER,title,USERNAME) VALUES (123,'Allen','Rench', 8733,'Torque Master','admin');
 
-					
+-- Product
+INSERT INTO [dbo].[PRODUCT] ([IMAGE],[NAME],[PRICE],[QUANTITY],[THUMBNAIL],[VENDOR_ID])
+     VALUES ('images/product/pc.jpg','PC',2000,10,'images/product/pc.jpg',1)
+
