@@ -15,6 +15,13 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
 	</definition>
 
+	<definition name="welcome" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="heading" value="Welcome" />
+		<put-attribute name="tagline" value="Welcome" />
+		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+
 	<!-- ROLE template -->
 	<definition name="role/list" extends="baseLayout">
 		<put-attribute name="title" value="List Roles" />
@@ -45,20 +52,36 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/customer/add.jsp" />
 	</definition>
 
-
-	<!-- CATEGORY template -->
-	<definition name="category/list" extends="baseLayout">
-		<put-attribute name="title" value="List Category" />
-		<put-attribute name="heading" value="List Category" />
-		<put-attribute name="tagline" value="List Category" />
-		<put-attribute name="content" value="/WEB-INF/views/category/list.jsp" />
+	<!-- Address template -->
+	<definition name="address/list" extends="baseLayout">
+		<put-attribute name="title" value="List Address" />
+		<put-attribute name="heading" value="List Address" />
+		<put-attribute name="tagline" value="List Address" />
+		<put-attribute name="content" value="/WEB-INF/views/address/list.jsp" />
 	</definition>
 
-	<definition name="category/add" extends="baseLayout">
-		<put-attribute name="title" value="Create New Category" />
-		<put-attribute name="heading" value="Create Category" />
-		<put-attribute name="tagline" value="Create Category" />
-		<put-attribute name="content" value="/WEB-INF/views/category/add.jsp" />
+	<definition name="address/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New Address" />
+		<put-attribute name="heading" value="Create Address" />
+		<put-attribute name="tagline" value="Create Address" />
+		<put-attribute name="content" value="/WEB-INF/views/address/add.jsp" />
+	</definition>
+
+	<!-- Contact Information template -->
+	<definition name="contactInformation/list" extends="baseLayout">
+		<put-attribute name="title" value="List Contact Information" />
+		<put-attribute name="heading" value="List Contact Information" />
+		<put-attribute name="tagline" value="List Contact Information" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/contactInformation/list.jsp" />
+	</definition>
+
+	<definition name="contactInformation/add" extends="baseLayout">
+		<put-attribute name="title" value="Create New Contact Information" />
+		<put-attribute name="heading" value="Create Contact Information" />
+		<put-attribute name="tagline" value="Create Contact Information" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/contactInformation/add.jsp" />
 	</definition>
 
 
@@ -77,11 +100,50 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/user/add.jsp" />
 	</definition>
 
+	<!-- Product template -->
+	<definition name="product/list" extends="baseLayout">
+		<put-attribute name="title" value="List of Product" />
+		<put-attribute name="heading" value="List of Product" />
+		<put-attribute name="tagline" value="List of Product" />
+		<put-attribute name="content" value="/WEB-INF/views/product/list.jsp" />
+	</definition>
+
 	<definition name="welcome" extends="baseLayout">
 		<put-attribute name="title" value="Welcome" />
 		<put-attribute name="heading" value="Welcome" />
 		<put-attribute name="tagline" value="Welcome" />
 		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
 	</definition>
+
+	<definition name="product/add" extends="baseLayout">
+		<put-attribute name="title" value="Create Product" />
+		<put-attribute name="heading" value="Create Product" />
+		<put-attribute name="tagline" value="Create Product" />
+		<put-attribute name="content" value="/WEB-INF/views/product/add.jsp" />
+	</definition>
+
+	<!-- Product Details template -->
+	<definition name="product/detail" extends="baseLayout">
+		<put-attribute name="title" value="Product Detail" />
+		<put-attribute name="heading" value="Product Detail" />
+		<put-attribute name="tagline" value="Product Detail" />
+		<put-attribute name="content" value="/WEB-INF/views/product/detail.jsp" />
+	</definition>
+
+	<!-- Order Confirm template -->
+	<definition name="order/confirm" extends="baseLayout">
+		<put-attribute name="title" value="Order Confirm" />
+		<put-attribute name="heading" value="Order Confirm" />
+		<put-attribute name="tagline" value="Order Confirm" />
+		<put-attribute name="content" value="/WEB-INF/views/order/confirm.jsp" />
+	</definition>
+
+	<definition name="order/complete" extends="baseLayout">
+		<put-attribute name="title" value="Order Complete" />
+		<put-attribute name="heading" value="Order Complete" />
+		<put-attribute name="tagline" value="Order Complete" />
+		<put-attribute name="content" value="/WEB-INF/views/order/complete.jsp" />
+	</definition>
+
 
 </tiles-definitions>

@@ -13,11 +13,11 @@
 	type="text/javascript"></script>
 
 <section class="content-header">
-	<h1>Role List Page</h1>
+	<h1>Address List Page</h1>
 	<ol class="breadcrumb">
 		<li><a href="<spring:url value="/"/>"><i
 				class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">Role list</li>
+		<li class="active">Address list</li>
 	</ol>
 </section>
 
@@ -26,40 +26,44 @@
 		<section class="panel">
 			<div class="panel-body">
 				<c:if test="${!empty message}">
-					<div class="alert alert-success" role="alert">${message}</div>
+					<div class="alert alert-success" address="alert">${message}</div>
 				</c:if>
 				<a class="btn btn-success"
-					href="${pageContext.request.contextPath}/roles/add"
-					data-toggle="modal"> Create Role </a>
+					href="${pageContext.request.contextPath}/addresss/add"
+					data-toggle="modal"> Create Address </a>
 			</div>
 			<table class="table table-striped table-advance table-hover">
 				<thead>
 					<tr>
 						<th>#</th>
-						<th><i class="fa fa-credit-card"></i> Name</th>
+						<th><i class="fa fa-credit-card"></i>First Name</th>
+						<th><i class="fa fa-credit-card"></i>Last Name</th>
+						<th><i class="fa fa-credit-card"></i>Email</th>
 						<th><i class=" fa fa-edit"></i> Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:set var="count" value="1" scope="page" />
-					<c:forEach var="role" items="${roles}">
+					<c:forEach var="address" items="${addresss}">
 						<tr>
 							<td><a href="#"> ${count} <c:set var="count"
 										value="${count + 1}" scope="page" /></a></td>
-							<td class="hidden-phone">${role.roleName}</td>
-							<td><a
-								href="${pageContext.request.contextPath}/rolse/edit/${role.roleId}">
-									<button class="btn btn-success btn-xs">
-										<i class="fa fa-pencil"></i>
-									</button>
-							</a> <a data-toggle="modal" href="#confirmRemove">
+							<td class="hidden-phone">${address.firstName}</td>
+							<td class="hidden-phone">${address.lastName}</td>
+							<td class="hidden-phone">${address.email}</td>
+							<td>
+								<!--                                <a href="${pageContext.request.contextPath}/address/edit/${address.id}">
+                                    <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
+                                </a>--> <a data-toggle="modal"
+								href="#confirmRemove">
 									<button class="btn btn-danger btn-xs confirmRemove"
-										id="${pageContext.request.contextPath}/roles/delete/${role.roleId}">
+										id="${pageContext.request.contextPath}/addresss/delete/${address.id}">
 										<i class="fa fa-trash-o "></i>
 									</button>
 							</a> <!-- Modal -->
 								<div class="modal fade" id="confirmRemove" tabindex="-1"
-									role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									address="dialog" aria-labelledby="myModalLabel"
+									aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-header">
@@ -77,7 +81,8 @@
 											</div>
 										</div>
 									</div>
-								</div> <!-- modal --></td>
+								</div> <!-- modal -->
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>

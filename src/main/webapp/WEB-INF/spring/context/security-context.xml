@@ -32,8 +32,16 @@
 	<!-- Implemented with Web based URL - Controller "METHOD" level authorization -->
 	<!-- the more specific rules need to come first, followed by the more general ones. -->
 	<!-- COMmENT out the following to see @Service METHOD level authorization -->
-	  <security:intercept-url pattern="/members/add" access="isAnonymous" />
+	  <security:intercept-url pattern="/members/add" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
 	  <security:intercept-url pattern="/members" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"  />
+	  <security:intercept-url pattern="/customers" access="hasAnyRole('ROLE_ADMIN','ROLE_CUSTOMER')" />
+	  <security:intercept-url pattern="/customers/add" access="hasAnyRole('ROLE_ADMIN','ROLE_CUSTOMER')"  />
+	  <security:intercept-url pattern="/vendors" access="hasAnyRole('ROLE_ADMIN','ROLE_VENDOR')" />
+	  <security:intercept-url pattern="/vendors/add" access="hasAnyRole('ROLE_ADMIN','ROLE_VENDOR')"  />
+	  <security:intercept-url pattern="/users" access="hasAnyRole('ROLE_ADMIN')" />
+	  <security:intercept-url pattern="/users/add" access="hasAnyRole('ROLE_ADMIN')"  />
+	  <security:intercept-url pattern="/roles" access="hasAnyRole('ROLE_ADMIN')" />
+	  <security:intercept-url pattern="/roles/add" access="hasAnyRole('ROLE_ADMIN')"  />
 <!-- Switch to HTTPS -->
  <!-- 	  <security:intercept-url pattern="/login" access="isAnonymous()" requires-channel="https"/>
  	  <security:intercept-url pattern="/logout" access="isAnonymous()" requires-channel="http"/>
