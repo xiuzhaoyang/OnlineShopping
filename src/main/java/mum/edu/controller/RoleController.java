@@ -16,19 +16,19 @@ public class RoleController {
 	@RequestMapping("/list")
 	public String listRoles(Model model) {
 		System.out.println("you are here in ADD ROLE SECTION");
-		return "roles/list";
+		return "role/list";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addRole(@ModelAttribute("newRole") Member newMember) {
 		System.out.println("you are here in ADD ROLE SECTION");
-		return "roles/add";
+		return "role/add";
 	}
 
 	@RequestMapping("/edit/{$roleId}")
 	public String editRole(Model model) {
 		System.out.println("you are here in ADD ROLE SECTION");
-		return "roles/edit";
+		return "role/edit";
 	}
 
 }

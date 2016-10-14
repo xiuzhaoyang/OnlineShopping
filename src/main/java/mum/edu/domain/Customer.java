@@ -42,12 +42,6 @@ public class Customer {
 			@JoinColumn(name = "CONTACT_INFORMATION_ID") })
 	private Set<ContactInformation> contactInformation;
 
-	public Customer(String firstName, String lastName, Credentials credentials) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.credentials = credentials;
-	}
-
 	public long getCustomerId() {
 		return customerId;
 	}
@@ -94,20 +88,6 @@ public class Customer {
 
 	public void setContactInformation(Set<ContactInformation> contactInformation) {
 		this.contactInformation = contactInformation;
-	}
-
-	@Override
-	public String toString() {
-		String result = String.format("Customer[id=%d, name='%s']%n", customerId, firstName, lastName);
-		if (addresses != null) {
-			for (Address address : addresses) {
-				result += String.format("Address[id=%d, name='%s']%n", address.getId(), address.getAddress1(),
-						address.getAddress2(), address.getCity(), address.getCountry(), address.getFullName(),
-						address.getPhoneNumber());
-			}
-		}
-
-		return result;
 	}
 
 }

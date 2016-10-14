@@ -2,6 +2,7 @@ package mum.edu.domain;
 
 import org.hibernate.annotations.Type;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,11 +16,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity(name = "USERS")
-public class Credentials {
+public class Credentials  implements Serializable {
+
+	/**
+	 * 
+	 */
+	public static final long serialVersionUID = -4438807501118875743L;
 
 	@Id
 	@GeneratedValue
-	@Column(name = "CUSTOMER_ID")
+	@Column(name = "USER_ID")
 	private long userId;
 
 	@Column(name = "USERNAME", nullable = false, unique = true)
