@@ -22,6 +22,7 @@ public class ShoppingCart {
     @Column(name = "DATE", nullable=false)
     private Date date;
 
+
     public long getId() {
         return id;
     }
