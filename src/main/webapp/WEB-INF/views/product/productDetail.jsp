@@ -15,7 +15,7 @@
 
 				</p>
 				<p>
-					<label> Price:</label> <label> ${product.price}</label>
+					<label> Price: $</label> <label> ${product.price}</label>
 
 				</p>
 				<p>
