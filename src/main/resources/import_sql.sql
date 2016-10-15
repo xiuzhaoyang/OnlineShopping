@@ -27,9 +27,4 @@ INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,2)
 
 -------- SAMPLE PRODUCTS----------------
 
-INSERT INTO [dbo].[PRODUCT]([DESCRIPTION],[IMAGE],[NAME],[PRICE],[QUANTITY],[THUMBNAIL],[VENDOR_ID])
-VALUES('CyberpowerPC Gamer Ultra GUA880 Gaming Desktop - AMD FX-4300 Quad Core 3.8GHz, 8GB DDR3 RAM, 1TB HDD, 24X DVD, NVIDIA GT 720 1GB, Windows 10'
-           , 'resources/images/product/pc_image.png','Computer', 2000, 30, 'resources/images/product/pc_thumbnail.png',0)
-
-
 

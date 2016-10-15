@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.google.common.util.concurrent.Service;
+
 import mum.edu.domain.Product;
 import mum.edu.service.ProductService;
 import mum.edu.viewmodel.ProductViewModel;
@@ -56,6 +58,12 @@ public class ProductController {
 		model.addAttribute("productForm", product);
 		
 		return "AddProduct";
+    }
+	
+	@RequestMapping(value="/delete/{id}", method = RequestMethod.GET)
+    public String productManagement(@PathVariable("id") Long id) {
+		productService.delete(id);
+		return "productManagement";
     }
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -107,4 +115,14 @@ public class ProductController {
 		
 		return "BrowserProducts";
     }
+	
+	@RequestMapping(value="/management", method = RequestMethod.GET)
+    public String productManagement(Model model) {
+		List<Product> products = productService.getAll();
+		
+		model.addAttribute("products", products);
+		
+		return "ProductManagement";
+    }
+
 }

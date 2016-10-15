@@ -90,4 +90,13 @@ public class Product {
     public void setVendorId(long vendorId) {
         this.vendorId = vendorId;
     }
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+    
 }
