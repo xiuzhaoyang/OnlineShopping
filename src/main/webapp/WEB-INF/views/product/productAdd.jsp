@@ -48,7 +48,7 @@
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Submit" class="btn btn-default" />
-						&nbsp; <a href="<spring:url value="/welcome" />"> back </a>
+						&nbsp; <a href="<spring:url value="/" />"> back </a>
 					</div>
 
 

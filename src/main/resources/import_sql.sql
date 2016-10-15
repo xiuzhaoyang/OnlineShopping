@@ -24,3 +24,7 @@ INSERT INTO ADDRESS (address1, address2, city, country, fullname, phone_number, 
 
 INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,1)
 INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,2)
+
+-------- SAMPLE PRODUCTS----------------
+
+

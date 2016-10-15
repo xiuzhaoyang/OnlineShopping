@@ -15,7 +15,7 @@
 						alt="image" style="height: 100px; width: 100px;" />
 				<div class="inner">
 					<p>${product.name}</p>
-					<p>${product.price}</p>
+					<p>$ ${product.price}</p>
 				</div>
 
 				<a href=" <spring:url value="/product/detail/${product.id}" />" class="small-box-footer">More info <i
