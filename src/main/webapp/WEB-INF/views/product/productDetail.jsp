@@ -8,7 +8,7 @@
 			<fieldset>
 				<p>
 					<img src="<c:url value="/${product.image}"></c:url>"
-						alt="image" style="height: 189px; width: 500px;" />
+						alt="image" style="height: 200px; width: 200px;" />
 				</p>
 				<p>
 					<label> Name:</label> <label> ${product.name}</label>

@@ -25,6 +25,9 @@ public class Product {
 
     @Column(name = "THUMBNAIL")
     private String thumbnail;
+    
+    @Column(name = "DESCRIPTION")
+    private String description;
 
     @Column(name = "IMAGE")
     private String image;
