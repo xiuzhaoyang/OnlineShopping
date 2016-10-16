@@ -31,6 +31,7 @@
 	</bean>
 
 
+<<<<<<< Updated upstream
 	<!--<bean id="dataSource"-->
 		<!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
 		<!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
@@ -38,6 +39,18 @@
 		<!--<property name="username" value="root" />-->
 		<!--<property name="password" value="root" />-->
 	<!--</bean>-->
+=======
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+		
+		<property name="url" value="jdbc:jtds:sqlserver://172.16.188.128:1433/OnlineShopping;instance=SQLEXPRESS" />
+		
+		<!--property name="url" value="jdbc:jtds:sqlserver://192.168.0.26:1433/OnlineShopping;instance=SQLEXPRESS" />  -->
+		<property name="username" value="sa" />
+		<property name="password" value="root" />
+	</bean>
+>>>>>>> Stashed changes
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>

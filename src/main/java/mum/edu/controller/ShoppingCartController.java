@@ -39,6 +39,8 @@ public class ShoppingCartController {
 
         return "shopping-cart/detail";
     }
+    
+
 
     @RequestMapping("/order/complete")
     public String orderComplete(Model model){

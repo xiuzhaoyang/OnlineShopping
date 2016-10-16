@@ -16,12 +16,25 @@ public class ShoppingCart {
     @Column(name="ID")
     private long id;
 
-    @Column(name="CU_ID")
+    public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	@Column(name="CSID")
     private long cuId;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATE", nullable=false)
     private Date date;
+
+
+    @Column(name = "TOTAL")
+    private double total;
+
 
     public long getId() {
         return id;
