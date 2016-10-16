@@ -9,6 +9,7 @@ import java.util.Set;
  */
 
 @Entity(name = "SHOPPING_CART")
+
 public class ShoppingCart {
 
     @Id
@@ -35,6 +36,9 @@ public class ShoppingCart {
     @Column(name = "TOTAL")
     private double total;
 
+
+    
+    
 
     public long getId() {
         return id;

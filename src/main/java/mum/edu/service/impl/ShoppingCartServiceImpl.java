@@ -8,6 +8,7 @@ import mum.edu.service.CredentialsService;
 import mum.edu.service.ProductService;
 import mum.edu.service.ShoppingCartService;
 
+import java.sql.SQLException;
 import java.util.Calendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class ShoppingCartServiceImpl implements ShoppingCartService {
+	@Autowired
 	ProductService pservice;
+	@Autowired
 	CredentialsService cservice;
 	
 	@Autowired
@@ -33,18 +36,29 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public boolean addProductToCart(long productId, int count) {
+    	System.out.println("adding to shopping cart 2");
     	ShoppingCart cart = new ShoppingCart();
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     	User user =  (User)auth.getPrincipal();
     	Calendar today = Calendar.getInstance();
     	today.set(Calendar.HOUR_OF_DAY, 0); // same for minutes and seconds
+    	System.out.println("adding to shopping cart 3"+today.toString());
+    	String username = user.getUsername();
+    	System.out.println("adding to shopping cart 3.0,name =" +username);
     	
-    	cart.setCuId(cservice.getIdByName(user.getUsername()));
+		cart.setCuId(cservice.findByName(username));
+
+    	System.out.println("adding to shopping cart 3.1");
     	cart.setDate(today.getTime());
+    	System.out.println("adding to shopping cart 3.2");
     	cart.setTotal(count);
-    	
-    	if(repo.save(cart) == null)
+    	System.out.println("adding to shopping cart 4");
+    	System.out.println("adding shopping cart"+cart.toString());
+    	if(repo.save(cart) == null) {
+    		System.out.println("Returning True");
     		return false;
+    	}
+    	System.out.println("Returning False");
     	return true;
     }
 

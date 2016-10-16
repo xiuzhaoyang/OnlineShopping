@@ -33,9 +33,12 @@ public class ShoppingCartController {
 //        cartService.getShoppingCartByUId(user.getUserId());
 
         ShoppingCart cart = new ShoppingCart();
+        
+        System.out.println("Adding to cart 1");
 
         cartService.addProductToCart(1,1);
-
+        
+        
 
         model.addAttribute("cart",cart);
 

@@ -9,5 +9,6 @@ public interface CredentialsService {
 
 	public void save(Credentials credentials);
 	public List<Credentials> findAll();
-	public long getIdByName(String name);
+	public long findByName(String name);
+	
  }
