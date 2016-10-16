@@ -12,7 +12,6 @@
 
 	<jpa:repositories base-package="mum.edu.repository" />
 
-
 	<bean id="entityManager"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -22,16 +21,17 @@
 		</property>
 		<property name="jpaProperties">
 			<props>
+
 				<prop key="hibernate.hbm2ddl.auto">create</prop> 
+
 				<prop key="hibernate.hbm2ddl.import_files">import_sql.sql</prop>
-				<!---->
+				
 				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
 				
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
 	</bean>
-
 	<!--<bean id="dataSource"-->
 		<!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
 		<!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->

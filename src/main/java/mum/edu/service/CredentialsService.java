@@ -12,6 +12,6 @@ public interface CredentialsService {
 
 	public long findByName(String name);
 	
-	public int findUserIdByUsername(String username);
+	//public int findUserIdByUsername(String username);
 
  }

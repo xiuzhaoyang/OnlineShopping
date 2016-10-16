@@ -3,7 +3,13 @@ INSERT INTO dbo.product (NAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDOR_ID,DESCRIPTI
 VALUES ('Chromebook 11 - 3120',100,169.0,'resources/images/product/COMPUTER RELATED/T3.JPG','resources/images/product/COMPUTER RELATED/Chromebook 11 - 3120.JPG','1001','This small. That powerful. Compact form factor (mini-tower) at just half the size of the Inspiron Desktop and packed with features for optimal performance.');
 
 
+
 /*
+>>>>>>> Stashed changes
+=======
+INSERT INTO dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
+VALUES('INSPIRON SMALL DESKTOP',20,279.0,'COMPUTER RELATED\\T2.JPG','COMPUTER RELATED\\INSPIRON SMALL DESKTOP.JPG',1002,'This small. That powerful. Compact form factor (mini-tower) at just half the size of the Inspiron Desktop and packed with features for optimal performance.
+');
 >>>>>>> Stashed changes
 
 INSERT INTO dbo.product(NAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDOR_ID)
@@ -18,10 +24,13 @@ VALUES('Inspiron_11_3000_3168_MultiColor',120,199.0,'COMPUTER RELATED\\T4.JPEG',
 						
 INSERT INTO dbo.product (PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES ('Chromebook 11 - 3120',100,169.0,'COMPUTER RELATED\\T3.JPG','COMPUTER RELATED\\Chromebook 11 - 3120.JPG',1001,'Worry-free computing. Enjoy a hassle-free experience with the affordable new Dell Chromebook 11 with easy connectivity, long battery life and automatic security updates.');
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 INSERT INTO dbo.product(NAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDOR_ID)
 VALUES('Inspiron_11_3000_3168_MultiColor',120,199.0,'resources/images/product/COMPUTER RELATED/T4.JPEG','resources/images/product/COMPUTER RELATED/Inspiron_11_3000_3168_MultiColor.JPEG','1003');
+=======
+>>>>>>> Stashed changes
 
 
 
@@ -39,6 +48,9 @@ VALUES('Inspiron_15_5000_5568_2in1_GDO',20,429.0,'COMPUTER RELATED\\T5.JPEG','CO
 
 INSERT INTO dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('OPTIPLEX 7440 ALL IN ONE',20,849.99,'COMPUTER RELATED\\T1.JPG','COMPUTER RELATED\\OPTIPLEX 7440 ALL IN ONE.JPG',1005,'Maximize space and improve productivity with this extremely secure, manageable and reliable commercial All-in-One desktop. The Dell OptiPlex 7440 is powered by a high-performance processor and features excellent storage and memory. ');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -63,8 +75,11 @@ VALUES('THE REGENERATING SERUM',320,330.99,'COSMETICS\\T11.JPG','COSMETICS\\THE 
 INSERT INTO
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('THE EYE CONCENTRATE',320,219.99,'COSMETICS\\T12.JPG','COSMETICS\\THE EYE CONCENTRATE.JPG',1006,'Maximize space and improve productivity with this extremely secure, manageable and reliable commercial All-in-One desktop. The Dell OptiPlex 7440 is powered by a high-performance processor and features excellent storage and memory. ');
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> Stashed changes
 
 
 INSERT INTO
@@ -142,6 +157,9 @@ VALUES('Remington PG6025 All-in-1 Lithium Powered Grooming',1110,17.79,'COSMETIC
 INSERT INTO
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('BLACK+DECKER EK700 9-Inch Electric Carving Knife, White',1110,13.99,'COSMETICS\\T5.JPG','COSMETICS\\BLACK+DECKER EK700 9-Inch Electric Carving Knife, White.JPG','1009','Oral-b black 1000 rechargeable electric toothbrush provides a clinically proven superior clean vs a regular manual toothbrush. The professionally inspired design of the cross action electric toothbrush head surrounds each tooth with bristles angled at 16 degrees, and 3d cleaning action oscillates, rotates, and pulsates to break up and remove up to 300 percent more plaque along the gum line than a regular manual toothbrush. ');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -153,8 +171,11 @@ VALUES('NIKE REFLECTIVE JUST DO IT',31110,30.79,'resources/images/product/GARMEN
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('NIKE REFLECTIVE JUST DO IT',31110,30.79,'GARMENTS\\T8.JPG','GARMENTS\\NIKE REFLECTIVE JUST DO IT.JPG','11006','Oral-b black 1000 rechargeable electric toothbrush provides a clinically proven superior clean vs a regular manual toothbrush. The professionally inspired design of the cross action electric toothbrush head surrounds each tooth with bristles angled at 16 degrees, and 3d cleaning action oscillates, rotates, and pulsates to break up and remove up to 300 percent more plaque along the gum line than a regular manual toothbrush. ');
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> Stashed changes
 
 
 INSERT INTO
@@ -174,6 +195,9 @@ VALUES('NIKE SPORTSWEAR TECH FLEECE',310,70.79,'GARMENTS\\T6.JPG','GARMENTS\\NIK
 INSERT INTO
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('NIKE SPORTSPANT TECH FLEECE',310,80.79,'GARMENTS\\T9.JPG','GARMENTS\\NIKE SPORTSPANT TECH FLEECE.JPG','11008','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -185,6 +209,9 @@ VALUES(' NIKE SPORTWEAR TECH FLEECE AEROLOFT',70,380.79,'resources/images/produc
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES(' NIKE SPORTWEAR TECH FLEECE AEROLOFT',70,380.79,'GARMENTS\\T7.JPG','GARMENTS\\NIKE SPORTWEAR TECH FLEECE AEROLOFT.JPG','11038','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -196,6 +223,9 @@ VALUES('NIKE THERMA-SPHERE',70,70.79,'resources/images/product/GARMENTS/T7.JPG',
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('NIKE THERMA-SPHERE',70,70.79,'GARMENTS\\T7.JPG','GARMENTS\\NIKE THERMA-SPHERE.JPG','1033','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -207,6 +237,9 @@ VALUES('ADM  Full Size Handcrafted Solid Wood Violin Outfit with Shoulder',90,10
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('ADM  Full Size Handcrafted Solid Wood Violin Outfit with Shoulder',90,105.79,'MUSCIAL INSTRUMENT\\T3.JPG','MUSCIAL INSTRUMENT\\ADM  Full Size Handcrafted Solid Wood Violin Outfit with Shoulder.JPG','7033','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -218,6 +251,9 @@ VALUES('Casio Casio AP250 Celviano 88-Key Digital Piano with Bench',10,1305.79,'
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('Casio Casio AP250 Celviano 88-Key Digital Piano with Bench',10,1305.79,'MUSCIAL INSTRUMENT\\T5.JPG','MUSCIAL INSTRUMENT\\Casio Casio AP250 Celviano 88-Key Digital Piano with Bench.JPG','7023','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -229,6 +265,9 @@ VALUES('F.R. Pfretszchner F.R. Pfretszchner 100 Full Size Fully Carved Violin Ou
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('F.R. Pfretszchner F.R. Pfretszchner 100 Full Size Fully Carved Violin Outfit',10, 699.79,'MUSCIAL INSTRUMENT\\T4.JPG','MUSCIAL INSTRUMENT\\F.R. Pfretszchner F.R. Pfretszchner 100 Full Size Fully Carved Violin Outfit.JPG','7023','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -241,6 +280,9 @@ VALUES(' Makala Waterman MK-SWTCL Soprano Ukulele- Translucent Clear',110, 49.79
 =======
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES(' Makala Waterman MK-SWTCL Soprano Ukulele- Translucent Clear',110, 49.79,'MUSCIAL INSTRUMENT\\T1.JPG','MUSCIAL INSTRUMENT\\Makala Waterman MK-SWTCL Soprano Ukulele- Translucent Clear.JPG','7025','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -276,8 +318,11 @@ VALUES('NIKE LUNAR FORCE 1 DUCKBOOT',2140, 149.79,'SPORT\\T1.JPG','SPORT\\NIKE L
 INSERT INTO
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
 VALUES('NIKE LUNAREPIC LOW FLYKNIT',2120, 180.79,'SPORT\\T3.png','SPORT\\NIKE LUNAREPIC LOW FLYKNIT.png','9095','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> Stashed changes
 
 
 
@@ -303,6 +348,9 @@ VALUES('NIKE ROSHE TWO',1120, 90.79,'SPORT\\T2.JPG','SPORT\\NIKE ROSHE TWO.JPG',
 
 INSERT INTO
 dbo.product(PRODUCTNAME,QUANTITY,PRICE,THUMBNAIL,IMAGE,VENDORID,DESCRIPTION)
+<<<<<<< Updated upstream
 VALUES('NIKE ZOOM LEBRON SOLDIER',1120, 80.79,'SPORT\\T4.png','SPORT\\NIKE ZOOM LEBRON SOLDIER.png','9097','LIGHTWEIGHT WARMTH The Nike Tech Fleece Mens Pants are made with thermal construction to give you lightweight warmth in a comfortable style. WARMTH WITHOUT WEIGHT Nike Tech Fleece is an innovative thermal construction that merges jersey with a synthetic spacer, allowing body heat to be trapped to create warmth without adding weight. SECURE STORAGE Side pockets keep small items secure and easy to access.');
 >>>>>>> Stashed changes
 */
+
+

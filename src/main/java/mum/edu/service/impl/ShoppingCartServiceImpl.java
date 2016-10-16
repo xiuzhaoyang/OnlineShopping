@@ -43,11 +43,15 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     	Calendar today = Calendar.getInstance();
     	today.set(Calendar.HOUR_OF_DAY, 0); // same for minutes and seconds
     	System.out.println("adding to shopping cart 3"+today.toString());
+//<<<<<<< Updated upstream
     	String username = user.getUsername();
-    	System.out.println("adding to shopping cart 3.0,name =" +username);
+    	//System.out.println("adding to shopping cart 3.0,name =" +username);
     	
 		cart.setCuId(cservice.findByName(username));
 
+//=======
+//    	cart.setCuId(cservice.getIdByName(user.getUsername()));
+//>>>>>>> Stashed changes
     	System.out.println("adding to shopping cart 3.1");
     	cart.setDate(today.getTime());
     	System.out.println("adding to shopping cart 3.2");

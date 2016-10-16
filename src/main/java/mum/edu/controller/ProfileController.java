@@ -49,7 +49,7 @@ public class ProfileController {
 		Credentials user = (Credentials) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		System.out.println("you are here in Profile Section");
 		System.out.println("Logged Username is : " + user.getUsername());
-		System.out.println(credentialsService.findUserIdByUsername(user.getUsername()));
+		//System.out.println(credentialsService.findUserIdByUsername(user.getUsername()));
 		return "customer/list";
 	}
 
