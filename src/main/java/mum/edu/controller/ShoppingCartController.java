@@ -36,7 +36,13 @@ public class ShoppingCartController {
 
 
         model.addAttribute("cart",cart);
+
         return "shopping-cart/detail";
+    }
+
+    @RequestMapping("/order/complete")
+    public String orderComplete(Model model){
+        return "order/complete";
     }
 
 }

@@ -2,6 +2,7 @@ package mum.edu.domain;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by su on 10/6/16.
@@ -21,7 +22,6 @@ public class ShoppingCart {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATE", nullable=false)
     private Date date;
-
 
     public long getId() {
         return id;
