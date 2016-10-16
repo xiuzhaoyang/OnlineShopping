@@ -5,55 +5,66 @@
 <section class="content">
 	<!-- Small boxes (Stat box) -->
 	<div class="row">
-		<div class="col-md-3 col-sm-4">
-			<form:form class="form-group" commandName="productForm" action="add"
-				method="post" enctype="multipart/form-data">
-				<fieldset>
-					<form:input path="id" type="hidden" />
-					<p>
-						<form:errors path="*" cssStyle="color : red;" />
-					</p>
-					<p>
-					<div class="form-group">
-						<label> Name :</label>
-						<div class="input-group margin-bottom-sm">
-							<form:input path="name" class="form-control" placeholder="Name" />
-							<form:errors path="name" class="form-control" />
-						</div>
+
+		<form:form class="form-horizontal" commandName="productForm"
+			action="add" method="post" enctype="multipart/form-data">
+			<div class="box-body">
+				<form:input path="id" type="hidden" />
+				<p>
+					<form:errors path="*" cssStyle="color : red;" />
+				</p>
+				<p>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Name:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" value="${product.name}"
+							disabled />
 					</div>
 
-
-					<div class="form-group">
-						<label> Price:</label>
-						<div class="input-group margin-bottom-sm">
-							<form:input path="price" class="form-control" placeholder="Price" />
-							<form:errors path="price" />
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Price:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" value="${product.price}"
+							disabled />
 					</div>
-
-					<div class="form-group">
-						<label> Quantity:</label>
-
-						<form:input path="quantity" class="form-control"
-							placeholder="Quantity" />
-						<form:errors path="quantity" />
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Quantity:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control"
+							value="${product.quantity}" disabled />
 					</div>
-					<div class="form-group">
-						<label>Image:</label> <input name="productImage"
-							class="form-control" type="file" />
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Description:</label>
+					<div class="col-sm-5">
+						<textarea class="form-control" rows="3" disabled>${product.description}</textarea>
 					</div>
-					<div class="form-group">
-						<label>Thumbnail: </label> <input name="productThumbnail"
-							class="form-control" type="file" />
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Image:</label>
+					<div class="col-sm-3">
+						<input name="productImage" class="form-control" type="file" />
 					</div>
-					<div class="form-group">
-						<input type="submit" value="Submit" class="btn btn-default" />
-						&nbsp; <a href="<spring:url value="/" />"> back </a>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Thumbnail: </label>
+					<div class="col-sm-3">
+						<input name="productThumbnail" class="form-control" type="file" />
 					</div>
-
-
-				</fieldset>
-			</form:form>
-		</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"></label>
+					<div class="col-sm-3">
+						<input type="submit" value="Submit" class="btn btn-primary" /> <a
+							href="<spring:url value="/" />" class="btn btn-default"> <span
+							class="glyphicon-hand-left glyphicon"></span> Back
+						</a>
+					</div>
+				</div>
+			</div>
+		</form:form>
 	</div>
+
 </section>
