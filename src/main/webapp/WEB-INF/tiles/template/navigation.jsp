@@ -96,6 +96,15 @@
 						<li><a href="<spring:url value="/shopping-cart/detail"/>"><i
 								class="fa fa-circle-o"></i>detail</a></li>
 					</ul></li>
+
+				<!-- Roder list section -->
+				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
+					<span>Order History</span> <i class="fa fa-angle-left pull-right"></i>
+				</a>
+					<ul class="treeview-menu">
+						<li><a href="<spring:url value="/order/list"/>"><i
+								class="fa fa-circle-o"></i>list</a></li>
+					</ul></li>
 			</security:authorize>
 
 			<security:authorize access="hasRole('ROLE_CUSTOMER')">

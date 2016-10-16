@@ -87,6 +87,8 @@ public class ProductController {
 		String thumbnailDirectory = "resources/images/product/" + id + "_thumbnail.png";
 		SaveImage(thumbnail, rootDirectory, thumbnailDirectory);
 
+		product.setImage(imageDirectory);
+		product.setThumbnail(thumbnailDirectory);
 		product.setId(id);
 		productService.save(product);
 

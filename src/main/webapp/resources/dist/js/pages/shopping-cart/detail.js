@@ -12,6 +12,12 @@ $(function(){
         $("input.count").prop( "disabled", true );
     });
     submit.click(function(){
-
+        $.ajax("/shopping-cart/complete",{
+            type:"POST",
+            data:{"test":"aa"},
+            success:function(data){
+                console.log("test");
+            }
+        });
     });
 }());
