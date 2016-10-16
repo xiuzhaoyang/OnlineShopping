@@ -10,6 +10,6 @@ import mum.edu.domain.Member;
 	@Repository
 	public interface CredentialsRepository extends  CrudRepository<Credentials, String> 
 	{
-		
+
   	}
 
