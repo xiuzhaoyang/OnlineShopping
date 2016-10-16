@@ -87,9 +87,9 @@ public class CustomerController {
 		credentialsService.save(userToBeAdded);
 		customerService.save(customerAdd);
 		if (result.hasErrors()) {
-			return "redirect:/welcome";
+			return "redirect:/login";
 		}
-		return "redirect:/welcome";
+		return "redirect:/login";
 
 	}
 
