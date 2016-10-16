@@ -12,8 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 @Service
-@Transactional 
+@Transactional
 public class CustomerServiceImpl implements mum.edu.service.CustomerService {
 
 	@Autowired
@@ -22,13 +23,11 @@ public class CustomerServiceImpl implements mum.edu.service.CustomerService {
 	@Autowired
 	CredentialsService credentialsService;
 
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void saveFull(Customer customer) {
 		credentialsService.save(customer.getCredentials());
 		customerRepository.save(customer);
 	}
 
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void save(Customer customer) {
 		customerRepository.save(customer);
 	}
@@ -40,5 +39,5 @@ public class CustomerServiceImpl implements mum.edu.service.CustomerService {
 	public Customer findByCustomerId(int customerId) {
 		return customerRepository.findByCustomerId(customerId);
 	}
-	
+
 }

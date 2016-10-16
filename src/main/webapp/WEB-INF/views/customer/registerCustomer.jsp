@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Online Shopping</title>
+<title>Online Shopping register Customer</title>
 <meta
 	content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 	name='viewport'>
@@ -25,15 +25,16 @@
 	rel="stylesheet" type="text/css" />
 
 </head>
-<body class="login-page">
-	<div class="login-box">
-		<div class="login-logo">
-			<b>Online Shopping</b>
+<body class="hold-transition register-page">
+	<div class="register-box">
+		<div class="register-logo">
+			<a href=""><b>Online </b>Shopping</a>
 		</div>
-		<!-- /.login-logo -->
-		<div class="login-box-body">
-			<p class="login-box-msg">Sign in to start your session</p>
-			<form:form action="postLogin" method="post">
+
+		<div class="register-box-body">
+			<p class="login-box-msg">Register a new Customer</p>
+
+			<form:form modelAttribute="newCustomerFront" method="post">
 				<c:if test="${not empty error}">
 					<div class="alert alert-danger">
 						<spring:message
@@ -46,33 +47,53 @@
 						placeholder="Username" autofocus /> <span
 						class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
+
 				<div class="form-group has-feedback">
 					<input name='password' type="password" class="form-control"
 						placeholder="Password" /> <span
 						class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
+
+				<div class="form-group has-feedback">
+					<input name='verifyPassword' type="password" class="form-control"
+						placeholder="verify Password" /> <span
+						class="glyphicon glyphicon-lock form-control-feedback"></span>
+				</div>
+
+				<div class="form-group has-feedback">
+					<input type="text" name='firstName' class="form-control"
+						placeholder="firstname" autofocus /> <span
+						class="glyphicon glyphicon-envelope form-control-feedback"></span>
+				</div>
+
+				<div class="form-group has-feedback">
+					<input type="text" name='lastName' class="form-control"
+						placeholder="Lastname" autofocus /> <span
+						class="glyphicon glyphicon-envelope form-control-feedback"></span>
+				</div>
+
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label> <input type="checkbox"> Remember Me
+							<label> <input type="checkbox"> I agree to the <a
+								href="#">terms</a>
 							</label>
 						</div>
 					</div>
 					<!-- /.col -->
 					<div class="col-xs-4">
-						<button type="submit" class="btn btn-primary btn-block btn-flat">Sign
-							In</button>
+						<button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
 					</div>
 					<!-- /.col -->
 				</div>
 			</form:form>
-			<a href="${pageContext.request.contextPath}/customers/addCustomer" class="text-center">Register a
-				new Customer</a>
 
+			<a href="<c:url value="/login"/>" class="text-center">I already
+				have a membership</a>
 		</div>
-		<!-- /.login-box-body -->
+		<!-- /.form-box -->
 	</div>
-	<!-- /.login-box -->
+	<!-- /.register-box -->
 
 	<!-- jQuery 2.1.4 -->
 	<script

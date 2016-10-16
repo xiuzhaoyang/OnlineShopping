@@ -19,7 +19,8 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="title" value="Welcome" />
 		<put-attribute name="heading" value="Welcome" />
 		<put-attribute name="tagline" value="Welcome" />
-		<put-attribute name="content" value="/WEB-INF/views/product/Products.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/Products.jsp" />
 	</definition>
 
 	<!-- ROLE template -->
@@ -114,35 +115,39 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="tagline" value="Welcome" />
 		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
 	</definition>
-	
+
 	<definition name="BrowserProducts" extends="baseLayout">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="heading" value="Products" />
 		<put-attribute name="tagline" value="Products" />
-		<put-attribute name="content" value="/WEB-INF/views/product/Products.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/Products.jsp" />
 	</definition>
-	
+
 	<definition name="AddProduct" extends="baseLayout">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="heading" value="Products" />
 		<put-attribute name="tagline" value="Products" />
-		<put-attribute name="content" value="/WEB-INF/views/product/productAdd.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/productAdd.jsp" />
 	</definition>
-	
+
 	<definition name="ViewProductDetail" extends="baseLayout">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="heading" value="Products" />
 		<put-attribute name="tagline" value="Products" />
-		<put-attribute name="content" value="/WEB-INF/views/product/productDetail.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/productDetail.jsp" />
 	</definition>
-	
+
 	<definition name="ProductManagement" extends="baseLayout">
 		<put-attribute name="title" value="Products" />
 		<put-attribute name="heading" value="Products" />
 		<put-attribute name="tagline" value="Products" />
-		<put-attribute name="content" value="/WEB-INF/views/product/ProductManagement.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/product/ProductManagement.jsp" />
 	</definition>
-	
+
 	<definition name="product/add" extends="baseLayout">
 		<put-attribute name="title" value="Create Product" />
 		<put-attribute name="heading" value="Create Product" />
@@ -173,11 +178,20 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/order/complete.jsp" />
 	</definition>
 
+	<!-- Profile template -->
+	<definition name="profile/profile" extends="baseLayout">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="heading" value="Profile" />
+		<put-attribute name="tagline" value="Profile" />
+		<put-attribute name="content" value="/WEB-INF/views/profile/profile.jsp" />
+	</definition>
+
 	<definition name="shopping-cart/detail" extends="baseLayout">
 		<put-attribute name="title" value="Shopping Cart Detail" />
 		<put-attribute name="heading" value="Shopping Cart Detail" />
 		<put-attribute name="tagline" value="Shopping Cart Detail" />
-		<put-attribute name="content" value="/WEB-INF/views/ShoppingCart/detail.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/ShoppingCart/detail.jsp" />
 	</definition>
 
 

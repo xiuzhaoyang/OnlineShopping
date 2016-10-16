@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import mum.edu.domain.Credentials;
+import mum.edu.domain.Member;
 import mum.edu.repository.CredentialsRepository;
 import mum.edu.service.CredentialsService;
 
@@ -35,6 +36,21 @@ public class CredentialsController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String getAddNewCredentialForm(@ModelAttribute("newCredential") Credentials newCredential) {
 		return "user/add";
+	}
+
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public String setAddNewCredentialForm(@ModelAttribute("newCredential") BindingResult result,
+			HttpServletRequest request) {
+		System.out.println("You are here in User add section");
+		if (result.hasErrors()) {
+			System.out.println("You are here in User add ERROR");
+			return "user/add";
+		}
+		else{
+			System.out.println("You are here in User add section");	
+		}
+		
+		return "redirect:/user/list";
 	}
 
 }

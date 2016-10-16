@@ -33,7 +33,8 @@
                         <th>#</th>
                         <th><i class="fa fa-credit-card"></i>First Name</th>
                         <th><i class="fa fa-credit-card"></i>Last Name</th>
-                        <th><i class="fa fa-credit-card"></i>Email</th>
+                        <th><i class="fa fa-credit-card"></i>Username</th>
+                        <th><i class="fa fa-credit-card"></i>Status</th>
                         <th><i class=" fa fa-edit"></i> Action</th> 
                     </tr>
                 </thead>
@@ -46,13 +47,11 @@
                                     <c:set var="count" value="${count + 1}" scope="page"/></a></td>
                             <td class="hidden-phone">${customer.firstName}</td>
                             <td class="hidden-phone">${customer.lastName}</td>
-                            <td class="hidden-phone">${customer.email}</td>
+                            <td class="hidden-phone">${customer.credentials.username}</td>
+                            <td class="hidden-phone">${customer.credentials.enabled}</td>
                             <td>
-<!--                                <a href="${pageContext.request.contextPath}/customer/edit/${customer.id}">
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
-                                </a>-->
                                 <a data-toggle="modal" href="#confirmRemove">
-                                    <button class="btn btn-danger btn-xs confirmRemove" id="${pageContext.request.contextPath}/customers/delete/${customer.id}"><i class="fa fa-trash-o "></i></button>
+                                    <button class="btn btn-danger btn-xs confirmRemove" id="${pageContext.request.contextPath}/customers/delete/${customer.customerId}"><i class="fa fa-trash-o "></i></button>
                                 </a>
                                 <!-- Modal -->
                                 <div class="modal fade" id="confirmRemove" tabindex="-1" customer="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -83,8 +82,8 @@
 <script>
     $(document).ready(function () {
         $(".confirmRemove").click(function () {
-            console.log(this.id);
-            $('#urlAddId').attr('href', this.id);
+            console.log(this.customerId);
+            $('#urlAddId').attr('href', this.customerId);
         });
     });
 </script> 

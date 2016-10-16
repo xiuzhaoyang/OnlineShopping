@@ -81,14 +81,12 @@ public class ProductController {
 
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
 		
-		String imageDirectory = "resources\\images\\product\\" + id + "_image.png";
+		String imageDirectory = "resources/images/product/" + id + "_image.png";
 		SaveImage(image, rootDirectory, imageDirectory);
 
-		String thumbnailDirectory = "resources\\images\\product\\" + id + "_thumbnail.png";
+		String thumbnailDirectory = "resources/images/product/" + id + "_thumbnail.png";
 		SaveImage(thumbnail, rootDirectory, thumbnailDirectory);
 
-		product.setImage(imageDirectory.replace("\\", "/"));
-		product.setThumbnail(thumbnailDirectory.replace("\\", "/"));
 		product.setId(id);
 		productService.save(product);
 

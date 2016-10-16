@@ -18,26 +18,29 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional 
+@Transactional
 public class CredentialsServiceImpl implements mum.edu.service.CredentialsService {
+
 	
 	@PersistenceContext
 	private EntityManager manager;
 	
- 	@Autowired
+
+
 	private CredentialsRepository credentialsRepository;
 
-  	@PreAuthorize("hasRole('ROLE_ADMIN')")
-  	public void save(Credentials credentials) {
+	public Credentials save(Credentials credentials) {
 
-  		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();   		
-  		String encodedPassword = passwordEncoder.encode(credentials.getPassword());
-  		credentials.setPassword(encodedPassword);
-  		
-  		credentialsRepository.save(credentials);
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String encodedPassword = passwordEncoder.encode(credentials.getPassword());
+		System.out.println("password is : " + encodedPassword);
+		credentials.setPassword(encodedPassword);
+
+		return credentialsRepository.save(credentials);
 	}
+
 	public List<Credentials> findAll() {
-		return (List<Credentials>)credentialsRepository.findAll();
+		return (List<Credentials>) credentialsRepository.findAll();
 	}
 	
 	@Override
@@ -59,5 +62,12 @@ public class CredentialsServiceImpl implements mum.edu.service.CredentialsServic
 	}
 	
 
- 
+	public int findUserIdByUsername(String username) {
+		System.out.println("Credentials service Implemation username : " + username);
+		return credentialsRepository.findUserIdByUsername(username);
+
+	}
+
+
+
 }

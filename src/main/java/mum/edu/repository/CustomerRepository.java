@@ -9,5 +9,6 @@ import mum.edu.domain.Customer;
 public interface CustomerRepository extends CrudRepository<Customer, String> {
 
 	public Customer findByCustomerId(long id);
+	
 
 }

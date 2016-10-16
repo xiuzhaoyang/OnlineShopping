@@ -7,8 +7,11 @@ import mum.edu.domain.Member;
  
 public interface CredentialsService {
 
-	public void save(Credentials credentials);
+	public Credentials save(Credentials credentials);
 	public List<Credentials> findAll();
+
 	public long findByName(String name);
 	
+	public int findUserIdByUsername(String username);
+
  }
