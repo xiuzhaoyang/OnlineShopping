@@ -105,12 +105,15 @@
 						<li><a href="<spring:url value="/order/list"/>"><i
 								class="fa fa-circle-o"></i>list</a></li>
 					</ul></li>
+<<<<<<< Updated upstream
 			</security:authorize>
 
 			<security:authorize access="hasRole('ROLE_CUSTOMER')">
 				<li class="active"><a href="<c:url value="/profile/"/>"> <i
 						class="fa fa-user"></i> <span>Profile</span>
 				</a></li>
+=======
+>>>>>>> Stashed changes
 			</security:authorize>
 
 

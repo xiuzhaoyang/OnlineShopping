@@ -172,6 +172,7 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 	</definition>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	<definition name="order/complete" extends="baseLayout">
 		<put-attribute name="title" value="Order Complete" />
 		<put-attribute name="heading" value="Order Complete" />
@@ -188,6 +189,8 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 	</definition>
 
 =======
+=======
+>>>>>>> Stashed changes
 	<definition name="order/list" extends="baseLayout">
 		<put-attribute name="title" value="Order List" />
 		<put-attribute name="heading" value="Order List" />
@@ -195,6 +198,9 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/order/list.jsp" />
 	</definition>
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	<definition name="shopping-cart/detail" extends="baseLayout">
 		<put-attribute name="title" value="Shopping Cart Detail" />
