@@ -5,11 +5,13 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <section class="content-header">
-	<h1>Add Role</h1>
+	<h1>Add Customer</h1>
 	<ol class="breadcrumb">
 		<li><a href="<spring:url value="/"/>"><i
 				class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">add role</li>
+		<li><a href="<spring:url value="/customers/list/"/>"><i
+				class="fa fa-dashboard"></i> Customer List</a></li>
+		<li class="active">Add Customer</li>
 	</ol>
 </section>
 
@@ -19,14 +21,23 @@
 			<div class="box box-info">
 				<div class="box-body">
 					<form:form class="cmxform form-horizontal tasi-form"
-						id="signupForm" commandName="newRole" method="post">
+						id="signupForm" commandName="newCustomer" method="post">
 						<div class="form-group ">
-							<label for="roleName" class="control-label col-lg-2">Role
+							<label for="firstName" class="control-label col-lg-2">First
 								Name</label>
 							<div class="col-lg-10">
 								<form:input required="" class=" form-control" type="text"
-									path="roleName" id="roleName" placeholder="" />
-								<form:errors path="roleName" cssClass="error" />
+									path="firstName" id="firstName" placeholder="" />
+								<form:errors path="firstName" cssClass="error" />
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="lastName" class="control-label col-lg-2">Last
+								Name</label>
+							<div class="col-lg-10">
+								<form:input required="" class=" form-control" type="text"
+									path="lastName" id="lastName" placeholder="" />
+								<form:errors path="lastName" cssClass="error" />
 							</div>
 						</div>
 

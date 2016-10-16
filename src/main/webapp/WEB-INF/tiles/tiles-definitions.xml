@@ -145,5 +145,13 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/order/complete.jsp" />
 	</definition>
 
+	<!-- Profile template -->
+	<definition name="profile/profile" extends="baseLayout">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="heading" value="Profile" />
+		<put-attribute name="tagline" value="Profile" />
+		<put-attribute name="content" value="/WEB-INF/views/profile/profile.jsp" />
+	</definition>
+
 
 </tiles-definitions>
