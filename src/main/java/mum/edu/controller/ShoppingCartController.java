@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by su on 10/15/16.
@@ -33,6 +34,7 @@ public class ShoppingCartController {
 
         ShoppingCart cart = new ShoppingCart();
 
+        cartService.addProductToCart(1,1);
 
 
         model.addAttribute("cart",cart);
@@ -42,7 +44,7 @@ public class ShoppingCartController {
     
 
 
-    @RequestMapping("/order/complete")
+    @RequestMapping(value = "/order/complete",method = RequestMethod.POST)
     public String orderComplete(Model model){
         return "order/complete";
     }
