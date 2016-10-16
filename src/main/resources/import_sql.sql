@@ -1,4 +1,3 @@
-
 INSERT INTO AUTHORITIES (username, authority) VALUES ('guest', 'ROLE_USER');
 INSERT INTO AUTHORITIES (username, authority) VALUES ('admin', 'ROLE_ADMIN');
 INSERT INTO AUTHORITIES (username, authority) VALUES ('admin', 'ROLE_USER');

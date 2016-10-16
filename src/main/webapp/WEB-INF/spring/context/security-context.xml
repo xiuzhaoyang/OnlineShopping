@@ -13,59 +13,6 @@
           Does NOT recognize WEB level components - for THAT  need to place enable line in Dispatcher-servlet-->
     <security:global-method-security pre-post-annotations="enabled"/>
 
-<!-- security:http enables security filter mechanism...name space configuration is activated -->
-<!-- use-expressions enables URL level authorization -->
-	<security:http use-expressions="true">
-	
-	<!-- if  non-standard ports for HTTP and/or HTTPS, you can specify them here  -->
-<!-- 	    <security:port-mappings>
-      		<security:port-mapping http="8080" https="8443"/>
-    	</security:port-mappings>
- -->	
-	<!-- We will just use web.xml error for access-denied -->
-	<!-- Other Options to redirect exception for web authorization -->
-<!-- 	<security:access-denied-handler error-page="/error-forbidden" />
- 	
-   <security:access-denied-handler ref="controllerExceptionHandler" />   
- 	-->
-	
-	<!-- Implemented with Web based URL - Controller "METHOD" level authorization -->
-	<!-- the more specific rules need to come first, followed by the more general ones. -->
-	<!-- COMmENT out the following to see @Service METHOD level authorization -->
-	  <security:intercept-url pattern="/members/add" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
-	  <security:intercept-url pattern="/members" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"  />
-	  <security:intercept-url pattern="/vendors" access="hasAnyRole('ROLE_ADMIN','ROLE_VENDOR')" />
-	  <security:intercept-url pattern="/vendors/add" access="hasAnyRole('ROLE_ADMIN','ROLE_VENDOR')"  />
-	  <security:intercept-url pattern="/users" access="hasAnyRole('ROLE_ADMIN')" />
-	  <security:intercept-url pattern="/users/add" access="hasAnyRole('ROLE_ADMIN')"  />
-	  <security:intercept-url pattern="/roles" access="hasAnyRole('ROLE_ADMIN')" />
-	  <security:intercept-url pattern="/roles/add" access="hasAnyRole('ROLE_ADMIN')"  />
-	  <security:intercept-url pattern="/products" access="hasAnyRole('ROLE_ADMIN','ROLE_CUSTOMER')" />
-	  <security:intercept-url pattern="/profile" access="hasAnyRole('ROLE_ADMIN','ROLE_CUSTOMER')" />
-<!-- Switch to HTTPS -->
- <!-- 	  <security:intercept-url pattern="/login" access="isAnonymous()" requires-channel="https"/>
- 	  <security:intercept-url pattern="/logout" access="isAnonymous()" requires-channel="http"/>
-  -->	
-		<!-- always-use-default-target overrides where login was triggered routes to default-target-url -->
-		<!-- logout-url renames j_security_logout URL -->
-		<!-- similarly username,password,login-processing  renames j_security_* stuff -->
-		<!-- e.g., /j_spring_security_check is default for login-processing-url-->
-<!-- Comment out login-page through logoinfailed for BASIC -->
- 		<security:form-login 
- 		 login-page="/login" 
-				login-processing-url="/postLogin"
-				username-parameter="username" 
-				password-parameter="password"
- 			    default-target-url="/welcome"    
-               always-use-default-target="true"   
-               authentication-failure-url="/loginfailed"/>
-         <security:logout logout-success-url="/logout"  logout-url= "/doLogout"/>
-        
-		<!-- BY DEFAULT the URL /j_spring_security_logout triggers logout 
-		NOTE: is it JUST a URL naming convention - no mapping occurs
-				logout-url= "/doLogout" REPLACES it -->
-	</security:http>
-	
     <!-- security:http enables security filter mechanism...name space configuration is activated -->
     <!-- use-expressions enables URL level authorization -->
     <security:http use-expressions="true">
@@ -78,7 +25,6 @@
         <!-- We will just use web.xml error for access-denied -->
         <!-- Other Options to redirect exception for web authorization -->
         <!-- 	<security:access-denied-handler error-page="/error-forbidden" />
-
            <security:access-denied-handler ref="controllerExceptionHandler" />
              -->
 
