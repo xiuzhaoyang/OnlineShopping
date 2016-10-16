@@ -89,11 +89,12 @@
 						<span>Product</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/product/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
+						<li><a href="<spring:url value="/product/management"/>"><i
+								class="fa fa-circle-o"></i> Managment </a></li>
 						<li><a href="<spring:url value="/product/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
-					</ul></li>
+					</ul>
+				</li>
 			</security:authorize>
 			<c:choose>
 				<c:when test="${empty username}">

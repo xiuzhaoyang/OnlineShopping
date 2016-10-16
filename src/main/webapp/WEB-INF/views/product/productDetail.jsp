@@ -15,29 +15,32 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Name:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" value="${product.name}"/>
+						<input type="text" class="form-control" value="${product.name}"
+							disabled />
 					</div>
 
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Price:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" value="${product.price}"/>
+						<input type="text" class="form-control" value="${product.price}"
+							disabled />
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Quantity:</label>
 					<div class="col-sm-3">
 						<input type="text" class="form-control"
-							value="${product.quantity}" />
+							value="${product.quantity}" disabled />
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Description:</label>
 					<div class="col-sm-5">
-						<textarea class="form-control" rows="3" >${product.description}</textarea>
+						<textarea class="form-control" rows="3" disabled>${product.description}</textarea>
 					</div>
 				</div>
+				
 				<div class="form-group">
 					<label class="col-sm-2 control-label"></label>
 					<div class="col-sm-3">

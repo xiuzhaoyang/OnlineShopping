@@ -17,29 +17,26 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Name:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" value="${product.name}"
-							disabled />
+						<form:input type="text" class="form-control" path="name" />
 					</div>
 
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Price:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" value="${product.price}"
-							disabled />
+						<form:input type="text" class="form-control" path="price" />
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Quantity:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control"
-							value="${product.quantity}" disabled />
+						<form:input type="text" class="form-control" path="quantity"/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Description:</label>
 					<div class="col-sm-5">
-						<textarea class="form-control" rows="3" disabled>${product.description}</textarea>
+						<form:textarea class="form-control" rows="3" path="description"/>
 					</div>
 				</div>
 				<div class="form-group">
