@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,11 +46,14 @@ public class ProfileController {
 	private ContactInformationService ContactInformationService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String listCustomers(Model model) {
+	public String listCustomers(Model model, Authentication authentication) {
+		System.out.println(authentication.getName());
+		System.out.println(authentication.getPrincipal());
+		System.out.println(authentication.getDetails());
+		System.out.println(authentication.getCredentials());
 		Credentials user = (Credentials) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		System.out.println("you are here in Profile Section");
 		System.out.println("Logged Username is : " + user.getUsername());
-		System.out.println(credentialsService.findUserIdByUsername(user.getUsername()));
 		return "customer/list";
 	}
 
