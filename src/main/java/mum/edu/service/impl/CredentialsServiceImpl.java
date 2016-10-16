@@ -1,16 +1,16 @@
 package mum.edu.service.impl;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import mum.edu.domain.Credentials;
 import mum.edu.repository.CredentialsRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,7 +21,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class CredentialsServiceImpl implements mum.edu.service.CredentialsService {
 
-	@Autowired
+	
+	@PersistenceContext
+	private EntityManager manager;
+	
+
+
 	private CredentialsRepository credentialsRepository;
 
 	public Credentials save(Credentials credentials) {
@@ -38,43 +43,31 @@ public class CredentialsServiceImpl implements mum.edu.service.CredentialsServic
 		return (List<Credentials>) credentialsRepository.findAll();
 	}
 	
-	public Credentials findByName(String name) throws SQLException
+	@Override
+	public long findByName(String name) 
 	{
-		Statement stmt = null;
-		long userId = 0;
-		String query = "SELECT TOP 1 * FROM [OnlineShopping].[dbo].[users] WHERE USERS.USER_ID = /'" +name+"'/";
-		try {
-			Connection con = DriverManager.getConnection("jdbc:default:connection");
-	        stmt = con.createStatement();
-	        ResultSet rs = stmt.executeQuery(query);
-	        while (rs.next()) {
-	            userId = rs.getInt("USER_ID");
-	        }
-	    } catch (SQLException e ) {
-	        //.printSQLException(e);
-	    } finally {
-	        if (stmt != null) { stmt.close(); }
-	    }
-		String idString = String.format("%d", userId);
-		return credentialsRepository.findOne(idString);
+		Credentials c = (Credentials) manager
+				.createNamedQuery("SELECTNAMEBYID",Credentials.class)
+				.setParameter(1, name)
+                .getResultList().get(0);
+		//String sUid = ""+ c.getUserId();
+		return c.getUserId();
+
+		/*
+		Credentials c = (Credentials) manager.createNamedQuery("SELECTNAMEBYID",Credentials.class);
+		//Credentials c = (Credentials) manager.createNamedQuery(name);
+		String sUid = String.format("%d", c.getUserId());
+		return credentialsRepository.findOne(sUid).getUserId();
+		*/
 	}
 	
-	@Override
-	public long getIdByName(String name) {
-		// TODO Auto-generated method stub
-		try {
-			return  findByName(name).getUserId();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return 0;
-		}
-	}
 
 	public int findUserIdByUsername(String username) {
 		System.out.println("Credentials service Implemation username : " + username);
 		return credentialsRepository.findUserIdByUsername(username);
 
 	}
+
+
 
 }

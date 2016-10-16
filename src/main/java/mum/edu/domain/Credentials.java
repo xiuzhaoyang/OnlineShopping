@@ -13,9 +13,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 
 @Entity(name = "USERS")
+@NamedNativeQueries({
+	@NamedNativeQuery(
+			name = "SELECTNAMEBYID",
+			query = "SELECT TOP 1 * "
+					+ "FROM [OnlineShopping].[dbo].[users] "
+					+ "WHERE USERS.USERNAME = ?",
+					resultClass=Credentials.class)
+})
 public class Credentials  implements Serializable {
 
 	/**
