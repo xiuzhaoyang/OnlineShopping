@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
         <title><tiles:insertAttribute ignore="true" name="title"/></title>
         <jsp:include page="baseCss.jsp" />
+        <jsp:include page="baseJS.jsp" />
     </head>
 
 
@@ -38,7 +39,7 @@
             </div>
             <jsp:include page="footer.jsp" />
 
-            <jsp:include page="baseJS.jsp" />
+
         </div>
     </body>
 </html>

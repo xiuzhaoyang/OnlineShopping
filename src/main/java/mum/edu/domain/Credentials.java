@@ -80,7 +80,15 @@ public class Credentials  implements Serializable {
 	}
 
 	public void setAuthority(List<Authority> authority) {
+
 		this.authority = authority;
 	}
 
+	public long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
 }

@@ -11,6 +11,8 @@ import mum.edu.domain.Member;
 	@Repository
 	public interface CredentialsRepository extends  CrudRepository<Credentials, String> 
 	{
+
 		public int findUserIdByUsername(String username);
+
   	}
 

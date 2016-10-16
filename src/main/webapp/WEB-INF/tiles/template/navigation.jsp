@@ -81,10 +81,20 @@
 						<span>Product</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/product/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
+						<li><a href="<spring:url value="/product/management"/>"><i
+								class="fa fa-circle-o"></i> Managment </a></li>
 						<li><a href="<spring:url value="/product/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
+					</ul>
+				</li>
+
+				<!-- shooping cart section -->
+				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
+					<span>Shopping Cart</span> <i class="fa fa-angle-left pull-right"></i>
+				</a>
+					<ul class="treeview-menu">
+						<li><a href="<spring:url value="/shopping-cart/detail"/>"><i
+								class="fa fa-circle-o"></i>detail</a></li>
 					</ul></li>
 			</security:authorize>
 
