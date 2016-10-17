@@ -1,5 +1,6 @@
 package mum.edu.service.impl;
 
+import mum.edu.domain.Credentials;
 import mum.edu.domain.Product;
 import mum.edu.domain.ShoppingCart;
 import mum.edu.repository.ProductRepository;
@@ -10,6 +11,10 @@ import mum.edu.service.ShoppingCartService;
 
 import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -33,6 +38,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 	
 	@Autowired
 	ShoppingCartRepository repo;
+	
+	@PersistenceContext
+	private EntityManager manager;
 
     @Override
     public boolean addProductToCart(long productId, int count) {
@@ -59,10 +67,10 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     	System.out.println("adding to shopping cart 4");
     	System.out.println("adding shopping cart"+cart.toString());
     	if(repo.save(cart) == null) {
-    		System.out.println("Returning True");
+    		System.out.println("Returning False");
     		return false;
     	}
-    	System.out.println("Returning False");
+    	System.out.println("Returning True");
     	return true;
     }
 
@@ -75,4 +83,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     public ShoppingCart getShoppingCartByUId(long uid) {
         return repo.findOne(uid);
     }
+
+	@Override
+	public List<ShoppingCart> findAllById(long uid) {
+		return  manager
+				.createNamedQuery("SELECTALLBYUID",ShoppingCart.class)
+				.setParameter(1, uid)
+                .getResultList();
+	}
 }

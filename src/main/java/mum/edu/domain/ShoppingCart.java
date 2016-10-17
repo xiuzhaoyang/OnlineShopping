@@ -9,6 +9,17 @@ import java.util.Set;
  */
 
 @Entity(name = "SHOPPING_CART")
+@NamedNativeQueries({
+	@NamedNativeQuery(
+			name = "SELECTALLBYUID",
+			query = "SELECT TOP 1 * "
+					+ "FROM [OnlineShopping].[dbo].[shopping_cart] "
+					+ "WHERE USERS.USERNAME = ?",
+					resultClass=ShoppingCart.class),
+
+})
+
+
 
 public class ShoppingCart {
 

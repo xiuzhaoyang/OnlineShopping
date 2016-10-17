@@ -44,8 +44,6 @@ public class ShoppingCartController {
 //        cartService.addProductToCart(1,1);
 
         cartService.addProductToCart(1,1);
-        
-        
 
         model.addAttribute("cart",cart);
 

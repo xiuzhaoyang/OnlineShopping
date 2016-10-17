@@ -24,8 +24,12 @@ import javax.persistence.OneToMany;
 			query = "SELECT TOP 1 * "
 					+ "FROM [OnlineShopping].[dbo].[users] "
 					+ "WHERE USERS.USERNAME = ?",
-					resultClass=Credentials.class)
+					resultClass=Credentials.class),
+
 })
+
+
+
 public class Credentials  implements Serializable {
 
 	/**
