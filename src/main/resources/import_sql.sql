@@ -18,11 +18,16 @@ INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname2', 'lastn
 INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname3', 'lastname3', 3);
 INSERT INTO CUSTOMER (firstname, lastname, user_id) VALUES ('firstname4', 'lastname4', 4);
 
-INSERT INTO ADDRESS (address1, address2, city, country, fullname, phone_number, state, zip) VALUES ('address1-1','address1-2','FF','USA','fullname1','phone1','state1','zip1')
-INSERT INTO ADDRESS (address1, address2, city, country, fullname, phone_number, state, zip) VALUES ('address2-1','address2-2','FF','USA','fullname2','phone2','state2','zop2')
+INSERT INTO CUSTOMER_ADDRESS (add_line_1, address_type, city_name, create_time, enabled, state_name, zip_code, CUSTOMER_ID) VALUES ('address1-1','HOME','city_name',null,true,'state','zip1',3)
+INSERT INTO CUSTOMER_ADDRESS (add_line_1, address_type, city_name, create_time, enabled, state_name, zip_code, CUSTOMER_ID) VALUES ('address1-1','WORK','city_name',null,true,'state','zip1',3)
 
-INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,1)
-INSERT INTO CUSTOMER_ADDRESS (customer_id, address_id) VALUES (2,2)
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('fax', '641-645-4567',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('home phone', '641-645-4567',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('mobile phone', '641-645-4567',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('skype1', 'superman123',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('skype2', 'batman123',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('email', 'superbat@gmail.com',3);
+INSERT INTO CONTACTINFORMATION (information_type, information_field,CUSTOMER_ID) VALUES ('email', 'superbat123@gmail.com',3);
 
 -------- SAMPLE PRODUCTS----------------
 

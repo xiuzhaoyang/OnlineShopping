@@ -1,16 +1,20 @@
 package mum.edu.domain;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -32,15 +36,13 @@ public class Customer {
 	@JoinColumn(name = "USER_ID")
 	private Credentials credentials;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "CUSTOMER_ADDRESS", joinColumns = { @JoinColumn(name = "CUSTOMER_ID") }, inverseJoinColumns = {
-			@JoinColumn(name = "ADDRESS_ID") })
-	private Set<Address> addresses;
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
+	@OrderBy("id DESC")
+	private Set<Address> addressList = new HashSet<Address>(0);
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "CUSTOMER_CONTACT", joinColumns = { @JoinColumn(name = "CUSTOMER_ID") }, inverseJoinColumns = {
-			@JoinColumn(name = "CONTACT_INFORMATION_ID") })
-	private Set<ContactInformation> contactInformation;
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
+	@OrderBy("id DESC")
+	private Set<ContactInformation> contactList = new HashSet<ContactInformation>(0);
 
 	public long getCustomerId() {
 		return customerId;
@@ -74,20 +76,20 @@ public class Customer {
 		this.credentials = credentials;
 	}
 
-	public Set<Address> getAddresses() {
-		return addresses;
+	public Set<Address> getAddressList() {
+		return addressList;
 	}
 
-	public void setAddresses(Set<Address> addresses) {
-		this.addresses = addresses;
+	public void setAddressList(Set<Address> addressList) {
+		this.addressList = addressList;
 	}
 
-	public Set<ContactInformation> getContactInformation() {
-		return contactInformation;
+	public Set<ContactInformation> getContactList() {
+		return contactList;
 	}
 
-	public void setContactInformation(Set<ContactInformation> contactInformation) {
-		this.contactInformation = contactInformation;
+	public void setContactList(Set<ContactInformation> contactList) {
+		this.contactList = contactList;
 	}
 
 }

@@ -1,6 +1,5 @@
 package mum.edu.repository;
 
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,11 +7,13 @@ import mum.edu.domain.Credentials;
 import mum.edu.domain.Customer;
 import mum.edu.domain.Member;
 
-	@Repository
-	public interface CredentialsRepository extends  CrudRepository<Credentials, String> 
-	{
+@Repository
+public interface CredentialsRepository extends CrudRepository<Credentials, String> {
 
-		public int findUserIdByUsername(String username);
+	public int findUserIdByUsername(String username);
 
-  	}
+	public Long getUserByUsername(String Username);
 
+	public Credentials findByUsername(String username);
+
+}

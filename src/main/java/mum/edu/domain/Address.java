@@ -1,70 +1,55 @@
 package mum.edu.domain;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ADDRESS")
+@Table(name = "customer_address")
 public class Address {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "ID")
-	private long id;
-
-	@Column(name = "FULLNAME")
-	private String fullName;
-
-	@Column(name = "ADDRESS1")
-	private String address1;
-
-	@Column(name = "ADDRESS2")
-	private String address2;
-
-	@Column(name = "CITY")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "customer_id", nullable = true)
+	private Customer customer;
+	@Column(name = "add_line_1")
+	private String addressLine1;
+	@Column(name = "city_name")
 	private String city;
+	@Column(name = "state_name")
+	private String stateName;
+	@Column(name = "zip_code")
+	private String zipCode;
+	@Column(name = "create_time")
+	private Date createTime;
+	@Column(name = "address_type")
+	private String addressType;
+	private boolean enabled;
 
-	@Column(name = "STATE")
-	private String state;
-
-	@Column(name = "ZIP")
-	private String zip;
-
-	@Column(name = "COUNTRY")
-	private String country;
-
-	@Column(name = "PHONE_NUMBER")
-	private String phoneNumber;
-
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getFullName() {
-		return fullName;
+	public Customer getCustomer() {
+		return customer;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
-	public String getAddress1() {
-		return address1;
+	public String getAddressLine1() {
+		return addressLine1;
 	}
 
-	public void setAddress1(String address1) {
-		this.address1 = address1;
-	}
-
-	public String getAddress2() {
-		return address2;
-	}
-
-	public void setAddress2(String address2) {
-		this.address2 = address2;
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
 	}
 
 	public String getCity() {
@@ -75,35 +60,44 @@ public class Address {
 		this.city = city;
 	}
 
-	public String getState() {
-		return state;
+	public String getStateName() {
+		return stateName;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setStateName(String stateName) {
+		this.stateName = stateName;
 	}
 
-	public String getZip() {
-		return zip;
+	public String getZipCode() {
+		return zipCode;
 	}
 
-	public void setZip(String zip) {
-		this.zip = zip;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 
-	public String getCountry() {
-		return country;
+	public Date getCreateTime() {
+		return createTime;
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getAddressType() {
+		return addressType;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setAddressType(String addressType) {
+		this.addressType = addressType;
 	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
 }

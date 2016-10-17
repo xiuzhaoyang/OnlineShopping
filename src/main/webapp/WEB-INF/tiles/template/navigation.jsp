@@ -30,27 +30,14 @@
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 
-				<!-- Address Section -->
-				<li class="treeview"><a href="#"> <i
-						class="fa fa-user-secret"></i> <span>Address</span> <i
-						class="fa fa-angle-left pull-right"></i>
+				<!-- Vendor Section -->
+				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
+						<span>Vendor</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/address/list"/>"><i
+						<li><a href="<spring:url value="/vendor/list"/>"><i
 								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/address/add"/>"><i
-								class="fa fa-circle-o"></i> Add </a></li>
-					</ul></li>
-
-				<!-- Contact Information Section -->
-				<li class="treeview"><a href="#"> <i
-						class="fa fa-user-secret"></i> <span>Contact Information</span> <i
-						class="fa fa-angle-left pull-right"></i>
-				</a>
-					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/contactInformation/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/contactInformation/add"/>"><i
+						<li><a href="<spring:url value="/vendor/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 
@@ -65,17 +52,6 @@
 								class="fa fa-circle-o"></i> Add </a></li>
 					</ul></li>
 
-				<!-- Category Section -->
-				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
-						<span>Category</span> <i class="fa fa-angle-left pull-right"></i>
-				</a>
-					<ul class="treeview-menu">
-						<li><a href="<spring:url value="/category/list"/>"><i
-								class="fa fa-circle-o"></i> List </a></li>
-						<li><a href="<spring:url value="/category/add"/>"><i
-								class="fa fa-circle-o"></i> Add </a></li>
-					</ul></li>
-
 				<!-- Product Section -->
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
 						<span>Product</span> <i class="fa fa-angle-left pull-right"></i>
@@ -85,12 +61,11 @@
 								class="fa fa-circle-o"></i> Managment </a></li>
 						<li><a href="<spring:url value="/product/add"/>"><i
 								class="fa fa-circle-o"></i> Add </a></li>
-					</ul>
-				</li>
+					</ul></li>
 
 				<!-- shooping cart section -->
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
-					<span>Shopping Cart</span> <i class="fa fa-angle-left pull-right"></i>
+						<span>Shopping Cart</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
 						<li><a href="<spring:url value="/shopping-cart/detail"/>"><i
@@ -99,21 +74,20 @@
 
 				<!-- Roder list section -->
 				<li class="treeview"><a href="#"> <i class="fa fa-bars"></i>
-					<span>Order History</span> <i class="fa fa-angle-left pull-right"></i>
+						<span>Order History</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
 						<li><a href="<spring:url value="/order/list"/>"><i
 								class="fa fa-circle-o"></i>list</a></li>
 					</ul></li>
-<<<<<<< Updated upstream
+
 			</security:authorize>
 
 			<security:authorize access="hasRole('ROLE_CUSTOMER')">
 				<li class="active"><a href="<c:url value="/profile/"/>"> <i
 						class="fa fa-user"></i> <span>Profile</span>
 				</a></li>
-=======
->>>>>>> Stashed changes
+
 			</security:authorize>
 
 

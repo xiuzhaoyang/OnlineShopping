@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import mum.edu.domain.Address;
 import mum.edu.domain.Customer;
+import mum.edu.domain.Vendor;
 
 @Repository
-public interface AddressRepository extends CrudRepository<Address, String> {
-	
+public interface VendorRepository extends CrudRepository<Vendor, String> {
+
 }

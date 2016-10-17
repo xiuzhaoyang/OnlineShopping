@@ -2,9 +2,9 @@ package mum.edu.service.impl;
 
 import java.util.List;
 
-import mum.edu.domain.Address;
+import mum.edu.domain.Vendor;
 import mum.edu.domain.Customer;
-import mum.edu.repository.AddressRepository;
+import mum.edu.repository.VendorRepository;
 import mum.edu.service.CredentialsService;
 
 import org.hibernate.Session;
@@ -15,21 +15,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class AddressServiceImpl implements mum.edu.service.AddressService {
+public class VendorServiceImpl implements mum.edu.service.VendorService {
 
 	@Autowired
-	private AddressRepository addressRepository;
+	private VendorRepository vendorRepository;
 
 	@Override
-	public long save(Address address) {
-		return addressRepository.save(address).getId();
+	public long save(Vendor vendor) {
+		return vendorRepository.save(vendor).getVendorId();
 
 	}
 
 	@Override
-	public List<Address> findAll() {
+	public List<Vendor> findAll() {
 
-		return (List<Address>) addressRepository.findAll();
+		return (List<Vendor>) vendorRepository.findAll();
 	}
 
 }

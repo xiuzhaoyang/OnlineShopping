@@ -9,6 +9,8 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -84,11 +86,15 @@ public class CustomerController {
 		userToBeAdded.setAuthority(list);
 		userToBeAdded.setEnabled(true);
 		userToBeAdded.setVerifyPassword(null);
-		credentialsService.save(userToBeAdded);
+		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String encodedPassword = passwordEncoder.encode(userToBeAdded.getPassword());
+		userToBeAdded.setPassword(encodedPassword);
+		System.out.println("trying to add user");
+		customerAdd.setCredentials(userToBeAdded);
+		System.out.println("Added User");
+		System.out.println("trying to add customer");
 		customerService.save(customerAdd);
-		if (result.hasErrors()) {
-			return "redirect:/login";
-		}
+
 		return "redirect:/login";
 
 	}

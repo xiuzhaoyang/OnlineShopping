@@ -5,10 +5,11 @@ import java.util.List;
 import mum.edu.domain.Address;
 import mum.edu.domain.Customer;
 import mum.edu.domain.Member;
+import mum.edu.domain.Vendor;
 
-public interface AddressService {
+public interface VendorService {
 
-	public long save(Address address);
+	public long save(Vendor vendor);
 
-	public List<Address> findAll();
+	public List<Vendor> findAll();
 }

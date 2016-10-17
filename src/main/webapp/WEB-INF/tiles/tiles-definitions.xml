@@ -53,6 +53,29 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/customer/add.jsp" />
 	</definition>
 
+	<!-- Vendor template -->
+	<definition name="vendor/list" extends="baseLayout">
+		<put-attribute name="title" value="List Vendor" />
+		<put-attribute name="heading" value="List Vendor" />
+		<put-attribute name="tagline" value="List Vendor" />
+		<put-attribute name="content" value="/WEB-INF/views/vendor/list.jsp" />
+	</definition>
+
+	<definition name="vendor/vendorRegister" extends="baseLayout">
+		<put-attribute name="title" value="Create New Vendor" />
+		<put-attribute name="heading" value="Create Vendor" />
+		<put-attribute name="tagline" value="Create Vendor" />
+		<put-attribute name="content" value="/WEB-INF/views/vendor/vendorRegister.jsp" />
+	</definition>
+
+	<definition name="vendor/waitApproval" extends="baseLayout">
+		<put-attribute name="title" value="Waiting Approval" />
+		<put-attribute name="heading" value="Waiting Approval" />
+		<put-attribute name="tagline" value="Waiting Approval" />
+		<put-attribute name="content" value="/WEB-INF/views/vendor/waitApproval.jsp" />
+	</definition>
+	
+
 	<!-- Address template -->
 	<definition name="address/list" extends="baseLayout">
 		<put-attribute name="title" value="List Address" />
@@ -171,8 +194,6 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/order/confirm.jsp" />
 	</definition>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 	<definition name="order/complete" extends="baseLayout">
 		<put-attribute name="title" value="Order Complete" />
 		<put-attribute name="heading" value="Order Complete" />
@@ -187,10 +208,6 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="tagline" value="Profile" />
 		<put-attribute name="content" value="/WEB-INF/views/profile/profile.jsp" />
 	</definition>
-
-=======
-=======
->>>>>>> Stashed changes
 	<definition name="order/list" extends="baseLayout">
 		<put-attribute name="title" value="Order List" />
 		<put-attribute name="heading" value="Order List" />
@@ -198,10 +215,6 @@ Foundation//DTD Tiles Configuration 3.0//EN"
 		<put-attribute name="content" value="/WEB-INF/views/order/list.jsp" />
 	</definition>
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 	<definition name="shopping-cart/detail" extends="baseLayout">
 		<put-attribute name="title" value="Shopping Cart Detail" />
 		<put-attribute name="heading" value="Shopping Cart Detail" />

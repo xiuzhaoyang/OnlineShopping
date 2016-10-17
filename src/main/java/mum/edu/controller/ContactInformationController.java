@@ -56,4 +56,20 @@ public class ContactInformationController {
 
 	}
 
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public String getEditContactInformationForm(
+			@ModelAttribute("newContactInformation") ContactInformationController newContactInformation) {
+		return "contactInformation/edit";
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public String processEditContactInformationForm(@ModelAttribute("newContactInformation") BindingResult result,
+			HttpServletRequest request) {
+		if (result.hasErrors()) {
+			return "contactInformation/edit";
+		}
+		return "redirect:/profile/";
+
+	}
+
 }

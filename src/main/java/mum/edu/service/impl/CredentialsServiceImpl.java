@@ -21,12 +21,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class CredentialsServiceImpl implements mum.edu.service.CredentialsService {
 
-	
 	@PersistenceContext
 	private EntityManager manager;
-	
 
-
+	@Autowired
 	private CredentialsRepository credentialsRepository;
 
 	public Credentials save(Credentials credentials) {
@@ -42,32 +40,27 @@ public class CredentialsServiceImpl implements mum.edu.service.CredentialsServic
 	public List<Credentials> findAll() {
 		return (List<Credentials>) credentialsRepository.findAll();
 	}
-	
+
 	@Override
-	public long findByName(String name) 
-	{
-		Credentials c = (Credentials) manager
-				.createNamedQuery("SELECTNAMEBYID",Credentials.class)
-				.setParameter(1, name)
-                .getResultList().get(0);
-		//String sUid = ""+ c.getUserId();
+	public long findByName(String name) {
+		Credentials c = (Credentials) manager.createNamedQuery("SELECTNAMEBYID", Credentials.class)
+				.setParameter(1, name).getResultList().get(0);
+		// String sUid = ""+ c.getUserId();
 		return c.getUserId();
 
 		/*
-		Credentials c = (Credentials) manager.createNamedQuery("SELECTNAMEBYID",Credentials.class);
-		//Credentials c = (Credentials) manager.createNamedQuery(name);
-		String sUid = String.format("%d", c.getUserId());
-		return credentialsRepository.findOne(sUid).getUserId();
-		*/
-	}
-	
-
-	public int findUserIdByUsername(String username) {
-		System.out.println("Credentials service Implemation username : " + username);
-		return credentialsRepository.findUserIdByUsername(username);
-
+		 * Credentials c = (Credentials)
+		 * manager.createNamedQuery("SELECTNAMEBYID",Credentials.class);
+		 * //Credentials c = (Credentials) manager.createNamedQuery(name);
+		 * String sUid = String.format("%d", c.getUserId()); return
+		 * credentialsRepository.findOne(sUid).getUserId();
+		 */
 	}
 
+	@Override
+	public Credentials getUser(String username) {
 
+		return credentialsRepository.findByUsername(username);
+	}
 
 }
