@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,10 +50,11 @@ public class ShoppingCartController {
 //        cartService.addProductToCart(1,1);
 
         cartService.addProductToCart(1,1);
-        ShoppingCart cart =  cartService.getShoppingCartByUId(uid);
+        List<ShoppingCart> list =  cartService.findAllById(uid);
 
-        model.addAttribute("cart",cart);
-
+        if(list.size() > 0 ){
+            model.addAttribute("cart",list.get(0));
+        }
         return "shopping-cart/detail";
     }
     

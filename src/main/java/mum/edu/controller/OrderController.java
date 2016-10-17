@@ -23,8 +23,8 @@ public class OrderController {
 
     @RequestMapping("/list")
     public String list(Model model){
-        List<Order> list =  orderService.findAll();
-        model.addAttribute("list",list);
+//        List<Order> list =  orderService.findAll();
+//        model.addAttribute("list",list);
         return "order/list";
     }
 }
