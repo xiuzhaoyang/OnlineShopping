@@ -14,7 +14,7 @@ import java.util.Set;
 			name = "SELECTALLBYUID",
 			query = "SELECT TOP 1 * "
 					+ "FROM [OnlineShopping].[dbo].[shopping_cart] "
-					+ "WHERE USERS.USERNAME = ?",
+					+ "WHERE SHOPPING_CART.UID = ?",
 					resultClass=ShoppingCart.class),
 
 })
