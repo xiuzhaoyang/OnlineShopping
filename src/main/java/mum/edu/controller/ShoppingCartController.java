@@ -2,6 +2,7 @@ package mum.edu.controller;
 
 import mum.edu.domain.Credentials;
 import mum.edu.domain.ShoppingCart;
+import mum.edu.service.CredentialsService;
 import mum.edu.service.ShoppingCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Role;
@@ -30,20 +31,25 @@ public class ShoppingCartController {
     @Autowired
     private ShoppingCartService cartService;
 
+    @Autowired
+    private CredentialsService userService;
+
 
     @RequestMapping("/detail")
     public String listRoles(Model model) {
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        User user =  (User)auth.getPrincipal();
-//        cartService.getShoppingCartByUId(user.getUserId());
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String account =  auth.getName();
+        long uid = userService.findByName(account);
 
-        ShoppingCart cart = new ShoppingCart();
-        
-        System.out.println("Adding to cart 1");
 
+//        ShoppingCart cart = new ShoppingCart();
+//
+//        System.out.println("Adding to cart 1");
+//
 //        cartService.addProductToCart(1,1);
 
         cartService.addProductToCart(1,1);
+        ShoppingCart cart =  cartService.getShoppingCartByUId(uid);
 
         model.addAttribute("cart",cart);
 

@@ -12,9 +12,9 @@ import java.util.Set;
 @NamedNativeQueries({
 	@NamedNativeQuery(
 			name = "SELECTALLBYUID",
-			query = "SELECT TOP 1 * "
+			query = "SELECT  * "
 					+ "FROM [OnlineShopping].[dbo].[shopping_cart] "
-					+ "WHERE USERS.USERNAME = ?",
+					+ "WHERE SHOPPING_CART.CSID = ?",
 					resultClass=ShoppingCart.class),
 
 })
