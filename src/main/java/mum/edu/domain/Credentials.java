@@ -19,8 +19,19 @@ import javax.persistence.OneToMany;
 
 @Entity(name = "USERS")
 @NamedNativeQueries({
-		@NamedNativeQuery(name = "SELECTUSERNAMEBYID", query = "select USER_ID from users where username = ?", resultClass = Credentials.class) })
-public class Credentials implements Serializable {
+
+	@NamedNativeQuery(
+			name = "SELECTNAMEBYID",
+			query = "SELECT TOP 1 * "
+					+ "FROM [OnlineShopping].[dbo].[users] "
+					+ "WHERE USERS.USERNAME = ?",
+					resultClass=Credentials.class),
+
+})
+
+
+
+public class Credentials  implements Serializable {
 
 	/**
 	 * 
